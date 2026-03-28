@@ -115,11 +115,23 @@ public sealed class ProjectileSystem : SharedProjectileSystem
         }
         else
         {
-            // Goobstation start
+            // Goobstation start - Enhanced penetration with limits
             if (component.Penetrate)
-                component.IgnoredEntities.Add(target);
+            {
+                // WWDP - Check penetration limit
+                if (component.MaxPenetrations > 0 && component.IgnoredEntities.Count >= component.MaxPenetrations)
+                {
+                    component.ProjectileSpent = true;
+                }
+                else
+                {
+                    component.IgnoredEntities.Add(target);
+                }
+            }
             else
+            {
                 component.ProjectileSpent = true;
+            }
             // Goobstation end
         }
 

@@ -276,6 +276,10 @@ public abstract partial class SharedProjectileSystem : EntitySystem
     {
         if (component.IgnoreShooter && (args.OtherEntity == component.Shooter || args.OtherEntity == component.Weapon))
             args.Cancelled = true;
+
+        // Goobstation - allow penetrating projectiles to pass through already-hit entities
+        if (component.Penetrate && component.IgnoredEntities.Contains(args.OtherEntity))
+            args.Cancelled = true;
     }
 
     public void SetShooter(EntityUid id, ProjectileComponent component, EntityUid shooterId)
