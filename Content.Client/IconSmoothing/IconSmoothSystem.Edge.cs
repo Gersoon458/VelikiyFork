@@ -22,106 +22,62 @@ public sealed partial class IconSmoothSystem
     {
         if (!Resolve(uid, ref sprite, ref smooth, false))
             return;
+        
+        if (smooth.SmoothEdgeLayers.Length == 0)
+            return;
 
         var xform = Transform(uid);
 
         var directions = DirectionFlag.None;
-        
+
         if (xform.GridUid is EntityUid gridUid && TryComp<MapGridComponent>(gridUid, out var grid))
         {
             var pos = _map.TileIndicesFor(gridUid, grid, xform.Coordinates);
 
-            if (MatchingEntity(smooth, _map.GetAnchoredEntitiesEnumerator(gridUid, grid, pos.Offset(Direction.North))))
+            if (MatchingEntity(smooth, grid, pos, Direction.North, xform.LocalRotation))
                 directions |= DirectionFlag.North;
-            if (MatchingEntity(smooth, _map.GetAnchoredEntitiesEnumerator(gridUid, grid, pos.Offset(Direction.South))))
+            if (MatchingEntity(smooth, grid, pos, Direction.South, xform.LocalRotation))
                 directions |= DirectionFlag.South;
-            if (MatchingEntity(smooth, _map.GetAnchoredEntitiesEnumerator(gridUid, grid, pos.Offset(Direction.East))))
+            if (MatchingEntity(smooth, grid, pos, Direction.East, xform.LocalRotation))
                 directions |= DirectionFlag.East;
-            if (MatchingEntity(smooth, _map.GetAnchoredEntitiesEnumerator(gridUid, grid, pos.Offset(Direction.West))))
+            if (MatchingEntity(smooth, grid, pos, Direction.West, xform.LocalRotation))
                 directions |= DirectionFlag.West;
         }
 
         UpdateEdge(uid, directions, sprite, smooth);
     }
 
-    private void UpdateEdge(EntityUid uid, DirectionFlag directions, SpriteComponent? sprite = null, IconSmoothComponent? smooth = null)
+    private void UpdateEdge(EntityUid uid, DirectionFlag directions, SpriteComponent? sprite = null, IconSmoothComponent? smooth = null, bool invert = false)
     {
         if (!Resolve(uid, ref sprite, ref smooth, false))
             return;
 
-        if (component.DrawDepth.HasValue)
-            sprite.DrawDepth = component.DrawDepth.Value;
+        if (smooth.SmoothEdgeLayers.Length == 0)
+            return;
 
-            _sprite.LayerSetVisible((uid, sprite), edge, (dir & directions) == 0x0);
+        foreach (var edge in smooth.SmoothEdgeLayers)
+        {
+            var dir = GetDir(edge);
+            var visible = (dir & directions) == 0x0;
+
+            _sprite.LayerSetVisible((uid, sprite), edge, visible ^ invert);
         }
     }
 
-    // WWDP edit start
-    private void HideAllEdgeLayers(SpriteComponent sprite)
+    private DirectionFlag GetDir(EdgeLayer direction)
     {
-        var allEdgeLayers = Enum.GetValues<EdgeLayer>();
-        foreach (var edgeLayer in allEdgeLayers)
+        return direction switch
         {
-            if (sprite.LayerMapTryGet(edgeLayer, out var layerIndex))
-            {
-                sprite.LayerSetVisible(layerIndex, false);
-            }
+            case EdgeLayer.South:
+                return DirectionFlag.South;
+            case EdgeLayer.East:
+                return DirectionFlag.East;
+            case EdgeLayer.North:
+                return DirectionFlag.North;
+            case EdgeLayer.West:
+                return DirectionFlag.West;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
-    }
-    // WWDP edit end
-
-    private bool MatchesEdgeCriteria(SmoothEdgeComponent edge, IconSmoothComponent neighbor)
-    {
-        if (!edge.RequireMatchingKey)
-            return true; // legacy: always show edge
-
-        if (neighbor.SmoothKey == null)
-            return false;
-
-        return edge.EdgeAdditionalKeys.Contains(neighbor.SmoothKey);
-    }
-
-    private Vector2i DirectionToOffset(DirectionFlag direction)
-    {
-        return direction switch
-        {
-            DirectionFlag.North => new Vector2i(0, 1),
-            DirectionFlag.South => new Vector2i(0, -1),
-            DirectionFlag.East => new Vector2i(1, 0),
-            DirectionFlag.West => new Vector2i(-1, 0),
-            DirectionFlag.NorthEast => new Vector2i(1, 1),
-            DirectionFlag.NorthWest => new Vector2i(-1, 1),
-            DirectionFlag.SouthEast => new Vector2i(1, -1),
-            DirectionFlag.SouthWest => new Vector2i(-1, -1),
-            _ => Vector2i.Zero
-        };
-    }
-
-    private EdgeLayer GetEdge(DirectionFlag direction)
-    {
-        return direction switch
-        {
-            DirectionFlag.South => EdgeLayer.South,
-            DirectionFlag.East => EdgeLayer.East,
-            DirectionFlag.North => EdgeLayer.North,
-            DirectionFlag.West => EdgeLayer.West,
-            DirectionFlag.SouthEast => EdgeLayer.SouthEast,
-            DirectionFlag.NorthEast => EdgeLayer.NorthEast,
-            DirectionFlag.NorthWest => EdgeLayer.NorthWest,
-            DirectionFlag.SouthWest => EdgeLayer.SouthWest,
-            _ => throw new ArgumentOutOfRangeException(nameof(direction), direction, null)
-        };
-    }
-
-    private enum EdgeLayer : byte
-    {
-        South,
-        East,
-        North,
-        West,
-        SouthEast,
-        NorthEast,
-        NorthWest,
-        SouthWest
     }
 }
