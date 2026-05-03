@@ -42,12 +42,20 @@ public sealed partial class IconSmoothSystem
                 directions |= DirectionFlag.East;
             if (MatchingEntity(smooth, grid, pos, Direction.West, xform.LocalRotation))
                 directions |= DirectionFlag.West;
+            if (MatchingEntity(smooth, grid, pos, Direction.NorthEast, xform.LocalRotation))
+                directions |= DirectionFlag.NorthEast;
+            if (MatchingEntity(smooth, grid, pos, Direction.NorthWest, xform.LocalRotation))
+                directions |= DirectionFlag.NorthWest;
+            if (MatchingEntity(smooth, grid, pos, Direction.SouthEast, xform.LocalRotation))
+                directions |= DirectionFlag.SouthEast;
+            if (MatchingEntity(smooth, grid, pos, Direction.SouthWest, xform.LocalRotation))
+                directions |= DirectionFlag.SouthWest;
         }
 
         UpdateEdge(uid, directions, sprite, smooth);
     }
 
-    private void UpdateEdge(EntityUid uid, DirectionFlag directions, SpriteComponent? sprite = null, IconSmoothComponent? smooth = null, bool invert = false)
+    private void UpdateEdge(EntityUid uid, DirectionFlag directions, SpriteComponent? sprite = null, IconSmoothComponent? smooth = null)
     {
         if (!Resolve(uid, ref sprite, ref smooth, false))
             return;
@@ -60,7 +68,7 @@ public sealed partial class IconSmoothSystem
             var dir = GetDir(edge);
             var visible = (dir & directions) == 0x0;
 
-            _sprite.LayerSetVisible((uid, sprite), edge, visible ^ invert);
+            _sprite.LayerSetVisible((uid, sprite), edge, visible ^ smooth.ShowEdgeIfMatching);
         }
     }
 
@@ -68,16 +76,15 @@ public sealed partial class IconSmoothSystem
     {
         return direction switch
         {
-            case EdgeLayer.South:
-                return DirectionFlag.South;
-            case EdgeLayer.East:
-                return DirectionFlag.East;
-            case EdgeLayer.North:
-                return DirectionFlag.North;
-            case EdgeLayer.West:
-                return DirectionFlag.West;
-            default:
-                throw new ArgumentOutOfRangeException();
-        }
+            EdgeLayer.North => DirectionFlag.North,
+            EdgeLayer.South => DirectionFlag.South,
+            EdgeLayer.East => DirectionFlag.East,
+            EdgeLayer.West => DirectionFlag.West,
+            EdgeLayer.NorthEast => DirectionFlag.NorthEast,
+            EdgeLayer.NorthWest => DirectionFlag.NorthWest,
+            EdgeLayer.SouthEast => DirectionFlag.SouthEast,
+            EdgeLayer.SouthWest => DirectionFlag.SouthWest,
+            _ => throw new ArgumentOutOfRangeException(),
+        };
     }
 }

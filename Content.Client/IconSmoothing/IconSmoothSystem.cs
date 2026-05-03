@@ -234,7 +234,6 @@ namespace Content.Client.IconSmoothing
         private void CalculateNewSprite(EntityUid uid, IconSmoothComponent? smooth = null)
         {
             var xform = Transform(uid);
-            MapGridComponent? grid = null;
 
             if (!_smoothQuery.Resolve(uid, ref smooth, false))
                 return;
@@ -258,11 +257,7 @@ namespace Content.Client.IconSmoothing
             Entity<MapGridComponent>? gridEntity = null;
             if (xform.Anchored)
             {
-                if (TryComp(xform.GridUid, out MapGridComponent? grid))
-                {
-                    gridEntity = (xform.GridUid.Value, grid);
-                }
-                else
+                if (!TryComp<MapGridComponent>(xform.GridUid, out var grid))
                 {
                     Log.Error($"Failed to calculate IconSmoothComponent sprite in {uid} because grid {xform.GridUid} was missing.");
                     return;
@@ -310,13 +305,15 @@ namespace Content.Client.IconSmoothing
         {
             while (candidates.MoveNext(out entity)) // MoveNext() assigns null at its last call
             {
-                if (_smoothQuery.TryGetComponent(entity, out var other) &&
-                    other.SmoothKey == smooth.SmoothKey &&
-                    other.Enabled)
-                {
-                    if (predicate is null || predicate(entity.Value))
-                        return true;
-                }
+                if (!_smoothQuery.TryGetComponent(entity, out var other))
+                    continue;
+                if (smooth.SmoothKey is null || other.SmoothKey is null)
+                    continue;
+                if (smooth.SmoothKey != other.SmoothKey && !smooth.AdditionalKeys.Contains(other.SmoothKey))
+                    continue;
+
+                if (predicate is null || predicate(entity.Value))
+                    return true;
             }
             return false;
         }
