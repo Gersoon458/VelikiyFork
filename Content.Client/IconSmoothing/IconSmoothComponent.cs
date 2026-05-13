@@ -32,17 +32,28 @@ public sealed partial class IconSmoothComponent : Component
     [DataField("key")]
     public string? SmoothKey { get; private set; }
 
+    // TODO: make this accept a list of strings for entities that require smoothing multiple layers 
     /// <summary>
-    ///     A list of keys to smooth with. If null, will default to smoothing with entities that have the same SmoothKey.
+    ///     Layer key that will be smoothed. If not specified, the topmost layer will be used. 
     /// </summary>
-    [DataField]
-    public List<string>? MatchKeys = null;
+    [DataField("layerKey")]
+    public string? SpriteLayerStringKey;
+
+    // TODO: make this into a List<object>?
+    [ViewVariables(VVAccess.ReadOnly)]
+    public object? SpriteLayerKey = null;
 
     /// <summary>
     ///     A list of keys to smooth with. If null, will default to smoothing with entities that have the same SmoothKey.
     /// </summary>
     [DataField]
-    public List<string>? EdgeMatchKeys = null;
+    public HashSet<string>? MatchKeys = null;
+
+    /// <summary>
+    ///     A list of keys for edge layers to smooth with. If null, will default to smoothing with entities that have the same SmoothKey.
+    /// </summary>
+    [DataField]
+    public HashSet<string>? EdgeMatchKeys = null;
 
     /// <summary>
     ///     Prepended to the RSI state.

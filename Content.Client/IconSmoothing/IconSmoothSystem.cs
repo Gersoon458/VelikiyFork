@@ -8,6 +8,8 @@ using Robust.Client.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Map.Enumerators;
+using Robust.Shared.Reflection;
+using Robust.Shared.Utility;
 using static Robust.Client.GameObjects.SpriteComponent;
 
 namespace Content.Client.IconSmoothing
@@ -20,6 +22,7 @@ namespace Content.Client.IconSmoothing
     public sealed partial class IconSmoothSystem : EntitySystem
     {
         [Dependency] private readonly SpriteSystem _sprite = default!;
+        [Dependency] private readonly IReflectionManager _reflection = default!;
         [Dependency] private readonly MapSystem _map = default!;
 
         private readonly HashSet<EntityUid> _dirtyEntities = new();
@@ -62,6 +65,11 @@ namespace Content.Client.IconSmoothing
         {
             var xform = Transform(uid);
             var sprite = Comp<SpriteComponent>(uid);
+
+            if (component.SpriteLayerStringKey is string stringKey && _reflection.TryParseEnumReference(stringKey, out var layerKeyEnum))
+                component.SpriteLayerKey = layerKeyEnum;
+            else
+                component.SpriteLayerKey = component.SpriteLayerStringKey;
 
             // mark us and anyone who could connect wit us dirty, if possible
             if (xform.Anchored && TryComp<MapGridComponent>(xform.GridUid, out var grid))
@@ -267,24 +275,26 @@ namespace Content.Client.IconSmoothing
                 }
                 gridEntity = (xform.GridUid.Value, grid);
             }
-
+            var layerIndex = 0;
+            if (smooth.SpriteLayerKey is not null)
+                sprite.LayerMapTryGet(smooth.SpriteLayerKey, out layerIndex, true);
             // these methods are also responsible for calling CalculateEdge/UpdateEdge.
             switch (smooth.Mode)
             {
                 case IconSmoothingMode.Corners:
-                    CalculateNewSpriteCorners((uid, smooth, sprite), gridEntity, xform);
+                    CalculateNewSpriteCorners((uid, smooth, sprite), layerIndex, gridEntity, xform);
                     break;
                 case IconSmoothingMode.CardinalFlags:
-                    CalculateNewSpriteCardinal((uid, smooth, sprite), gridEntity, xform);
+                    CalculateNewSpriteCardinal((uid, smooth, sprite), layerIndex, gridEntity, xform);
                     break;
                 case IconSmoothingMode.Diagonal:
-                    CalculateNewSpriteDiagonal((uid, smooth, sprite), gridEntity, xform);
+                    CalculateNewSpriteDiagonal((uid, smooth, sprite), layerIndex, gridEntity, xform);
                     break;
                 case IconSmoothingMode.Horizontal:
-                    CalculateNewSpriteHorizontal((uid, smooth, sprite), gridEntity, xform);
+                    CalculateNewSpriteHorizontal((uid, smooth, sprite), layerIndex, gridEntity, xform);
                     break;
                 case IconSmoothingMode.Vertical:
-                    CalculateNewSpriteVertical((uid, smooth, sprite), gridEntity, xform);
+                    CalculateNewSpriteVertical((uid, smooth, sprite), layerIndex, gridEntity, xform);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

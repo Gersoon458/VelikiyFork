@@ -12,9 +12,11 @@ using static Robust.Client.GameObjects.SpriteComponent;
 
 namespace Content.Client.IconSmoothing;
 
+
+#pragma warning disable CS0618 // go fuck yourself
 public sealed partial class IconSmoothSystem : EntitySystem
 {
-    private void CalculateNewSpriteCorners(Entity<IconSmoothComponent, SpriteComponent> entity, MapGridComponent? grid, TransformComponent xform)
+    private void CalculateNewSpriteCorners(Entity<IconSmoothComponent, SpriteComponent> entity, int layerIndex, MapGridComponent? grid, TransformComponent xform)
     {
         var smooth = entity.Comp1;
         var sprite = entity.Comp2;
@@ -23,11 +25,11 @@ public sealed partial class IconSmoothSystem : EntitySystem
             ? (CornerFill.None, CornerFill.None, CornerFill.None, CornerFill.None)
             : CalculateCornerFill(grid, smooth, xform);
 
-        // TODO figure out a better way to set multiple sprite layers.
-        // This will currently re-calculate the sprite bounding box 4 times.
-        // It will also result in 4-8 sprite update events being raised when it only needs to be 1-2.
-        // At the very least each event currently only queues a sprite for updating.
-        // Oh god sprite component is a mess.
+        // // TODO figure out a better way to set multiple sprite layers.
+        // // This will currently re-calculate the sprite bounding box 4 times.
+        // // It will also result in 4-8 sprite update events being raised when it only needs to be 1-2.
+        // // At the very least each event currently only queues a sprite for updating.
+        // // Oh god sprite component is a mess.
         sprite.LayerSetState(CornerLayers.NE, $"{smooth.StateBase}{(int) cornerNE}");
         sprite.LayerSetState(CornerLayers.SE, $"{smooth.StateBase}{(int) cornerSE}");
         sprite.LayerSetState(CornerLayers.SW, $"{smooth.StateBase}{(int) cornerSW}");
@@ -100,7 +102,7 @@ public sealed partial class IconSmoothSystem : EntitySystem
         return (cornerNE, cornerNW, cornerSW, cornerSE);
     }
 
-    private void CalculateNewSpriteCardinal(Entity<IconSmoothComponent, SpriteComponent> entity, MapGridComponent? grid, TransformComponent xform)
+    private void CalculateNewSpriteCardinal(Entity<IconSmoothComponent, SpriteComponent> entity, int layerIndex, MapGridComponent? grid, TransformComponent xform)
     {
         var dirs = CardinalConnectDirs.None;
         var smooth = entity.Comp1;
@@ -108,7 +110,7 @@ public sealed partial class IconSmoothSystem : EntitySystem
 
         if (grid == null)
         {
-            sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
+            sprite.LayerSetState(layerIndex, $"{smooth.StateBase}{(int) dirs}");
             return;
         }
 
@@ -122,17 +124,17 @@ public sealed partial class IconSmoothSystem : EntitySystem
         if (MatchingEntity(smooth, grid, pos, Direction.West))
             dirs |= CardinalConnectDirs.West;
 
-        sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
+        sprite.LayerSetState(layerIndex, $"{smooth.StateBase}{(int) dirs}");
     }
 
-    private void CalculateNewSpriteDiagonal(Entity<IconSmoothComponent, SpriteComponent> entity, MapGridComponent? grid, TransformComponent xform)
+    private void CalculateNewSpriteDiagonal(Entity<IconSmoothComponent, SpriteComponent> entity, int layerIndex, MapGridComponent? grid, TransformComponent xform)
     {
         var smooth = entity.Comp1;
         var sprite = entity.Comp2;
 
         if (grid == null)
         {
-            sprite.LayerSetState(0, $"{smooth.StateBase}0");
+            sprite.LayerSetState(layerIndex, $"{smooth.StateBase}0");
             return;
         }
         var neighbors = new Direction[]
@@ -154,12 +156,12 @@ public sealed partial class IconSmoothSystem : EntitySystem
         }
 
         if (matching)
-            sprite.LayerSetState(0, $"{smooth.StateBase}1");
+            sprite.LayerSetState(layerIndex, $"{smooth.StateBase}1");
         else
-            sprite.LayerSetState(0, $"{smooth.StateBase}0");
+            sprite.LayerSetState(layerIndex, $"{smooth.StateBase}0");
     }
 
-    private void CalculateNewSpriteHorizontal(Entity<IconSmoothComponent, SpriteComponent> entity, MapGridComponent? grid, TransformComponent xform)
+    private void CalculateNewSpriteHorizontal(Entity<IconSmoothComponent, SpriteComponent> entity, int layerIndex, MapGridComponent? grid, TransformComponent xform)
     {
         var dirs = CardinalConnectDirs.None;
         var smooth = entity.Comp1;
@@ -167,7 +169,7 @@ public sealed partial class IconSmoothSystem : EntitySystem
 
         if (grid == null)
         {
-            sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
+            sprite.LayerSetState(layerIndex, $"{smooth.StateBase}{(int) dirs}");
             return;
         }
         var ourDir = xform.LocalRotation.GetDir();
@@ -178,12 +180,12 @@ public sealed partial class IconSmoothSystem : EntitySystem
         if (MatchingEntity(smooth, grid, pos, Direction.West, xform.LocalRotation, sameRotPredicate))
             dirs |= CardinalConnectDirs.West;
 
-        sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
+        sprite.LayerSetState(layerIndex, $"{smooth.StateBase}{(int) dirs}");
 
         bool sameRotPredicate(EntityUid uid) => Transform(uid).LocalRotation.GetDir() == ourDir;
     }
 
-    private void CalculateNewSpriteVertical(Entity<IconSmoothComponent, SpriteComponent> entity, MapGridComponent? grid, TransformComponent xform)
+    private void CalculateNewSpriteVertical(Entity<IconSmoothComponent, SpriteComponent> entity, int layerIndex, MapGridComponent? grid, TransformComponent xform)
     {
         var dirs = CardinalConnectDirs.None;
         var smooth = entity.Comp1;
@@ -191,7 +193,7 @@ public sealed partial class IconSmoothSystem : EntitySystem
 
         if (grid == null)
         {
-            sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
+            sprite.LayerSetState(layerIndex, $"{smooth.StateBase}{(int) dirs}");
             return;
         }
         var ourDir = xform.LocalRotation.GetDir();
@@ -202,9 +204,10 @@ public sealed partial class IconSmoothSystem : EntitySystem
         if (MatchingEntity(smooth, grid, pos, Direction.South, xform.LocalRotation, sameRotPredicate))
             dirs |= CardinalConnectDirs.South;
 
-        sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
+        sprite.LayerSetState(layerIndex, $"{smooth.StateBase}{(int) dirs}");
 
         bool sameRotPredicate(EntityUid uid) => Transform(uid).LocalRotation.GetDir() == ourDir;
     }
 
 }
+#pragma warning restore CS0618
