@@ -110,12 +110,14 @@ public enum IconSmoothingMode : byte
 
 public enum EdgeLayer : byte
 {
-    South,
-    East,
-    North,
-    West,
-    SouthEast,
-    NorthEast,
-    NorthWest,
-    SouthWest,
+    None = 0, // whoever uses this as a layer map key will be shot on sight, this only exists as a crutch to allow using this enum as with bitfields so i don't have to make a second "EdgeLayerBitfield" enum 
+    South = 1 << 0,
+    East = 1 << 1,
+    North = 1 << 2,
+    West = 1 << 3,
+
+    SouthEast = 1 << 4,
+    NorthEast = 1 << 5,
+    NorthWest = 1 << 6,
+    SouthWest = 1 << 7,
 }

@@ -162,7 +162,7 @@ namespace Content.Client.IconSmoothing
             // Performance: This could be spread over multiple updates, or made parallel.
             foreach (var uid in _dirtyEntities)
             {
-                if(!TerminatingOrDeleted(uid))
+                if (!TerminatingOrDeleted(uid))
                     CalculateNewSprite(uid);
             }
             _dirtyEntities.Clear();
@@ -245,11 +245,14 @@ namespace Content.Client.IconSmoothing
                 return;
             }
 
+            // Yes, this will double the number of MatchingEntity() calls for corner smoothing mode.
+            // Measure the performance impact for updating a single wall before trying to fix this. It's not worth it. 
+            CalculateEdge(uid, sprite, smooth);
+
             if (smooth.Mode == IconSmoothingMode.NoSprite
                 || !smooth.Enabled
                 || !smooth.Running)
             {
-                CalculateEdge(uid, sprite, smooth);
                 return;
             }
 

@@ -103,6 +103,7 @@
     - walls
     - shutters
     base: grille
+    showEdgeIfMatching: true
   - type: SmoothEdge
     requireMatchingKey: true
     blockAdditionalKeys:

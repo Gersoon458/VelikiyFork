@@ -87,6 +87,7 @@
     - walls
     - airlocks # WWDP edit end
     base: window
+    showEdgeIfMatching: true
   - type: Construction
     graph: Window
     node: window
@@ -105,7 +106,7 @@
     - KnockOn
   - type: SmoothEdge # WWDP edit start
     requireMatchingKey: true
-    blockAdditionalKeys:
+    blockAdditionalKeys:  
     - shutters
     edgeAdditionalKeys:
     - walls # WWDP edit end

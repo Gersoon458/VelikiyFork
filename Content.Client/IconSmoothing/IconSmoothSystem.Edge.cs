@@ -22,40 +22,40 @@ public sealed partial class IconSmoothSystem
     {
         if (!Resolve(uid, ref sprite, ref smooth, false))
             return;
-        
+
         if (smooth.SmoothEdgeLayers.Length == 0)
             return;
 
         var xform = Transform(uid);
 
-        var directions = DirectionFlag.None;
+        var directions = EdgeLayer.None;
 
         if (xform.GridUid is EntityUid gridUid && TryComp<MapGridComponent>(gridUid, out var grid))
         {
             var pos = _map.TileIndicesFor(gridUid, grid, xform.Coordinates);
 
             if (MatchingEntity(smooth, grid, pos, Direction.North, xform.LocalRotation))
-                directions |= DirectionFlag.North;
+                directions |= EdgeLayer.North;
             if (MatchingEntity(smooth, grid, pos, Direction.South, xform.LocalRotation))
-                directions |= DirectionFlag.South;
+                directions |= EdgeLayer.South;
             if (MatchingEntity(smooth, grid, pos, Direction.East, xform.LocalRotation))
-                directions |= DirectionFlag.East;
+                directions |= EdgeLayer.East;
             if (MatchingEntity(smooth, grid, pos, Direction.West, xform.LocalRotation))
-                directions |= DirectionFlag.West;
+                directions |= EdgeLayer.West;
             if (MatchingEntity(smooth, grid, pos, Direction.NorthEast, xform.LocalRotation))
-                directions |= DirectionFlag.NorthEast;
+                directions |= EdgeLayer.NorthEast;
             if (MatchingEntity(smooth, grid, pos, Direction.NorthWest, xform.LocalRotation))
-                directions |= DirectionFlag.NorthWest;
+                directions |= EdgeLayer.NorthWest;
             if (MatchingEntity(smooth, grid, pos, Direction.SouthEast, xform.LocalRotation))
-                directions |= DirectionFlag.SouthEast;
+                directions |= EdgeLayer.SouthEast;
             if (MatchingEntity(smooth, grid, pos, Direction.SouthWest, xform.LocalRotation))
-                directions |= DirectionFlag.SouthWest;
+                directions |= EdgeLayer.SouthWest;
         }
 
         UpdateEdge(uid, directions, sprite, smooth);
     }
 
-    private void UpdateEdge(EntityUid uid, DirectionFlag directions, SpriteComponent? sprite = null, IconSmoothComponent? smooth = null)
+    private void UpdateEdge(EntityUid uid, EdgeLayer directions, SpriteComponent? sprite = null, IconSmoothComponent? smooth = null)
     {
         if (!Resolve(uid, ref sprite, ref smooth, false))
             return;
@@ -65,26 +65,9 @@ public sealed partial class IconSmoothSystem
 
         foreach (var edge in smooth.SmoothEdgeLayers)
         {
-            var dir = GetDir(edge);
-            var visible = (dir & directions) == 0x0;
+            var visible = (edge & directions) == 0x0;
 
             _sprite.LayerSetVisible((uid, sprite), edge, visible ^ smooth.ShowEdgeIfMatching);
         }
-    }
-
-    private DirectionFlag GetDir(EdgeLayer direction)
-    {
-        return direction switch
-        {
-            EdgeLayer.North => DirectionFlag.North,
-            EdgeLayer.South => DirectionFlag.South,
-            EdgeLayer.East => DirectionFlag.East,
-            EdgeLayer.West => DirectionFlag.West,
-            EdgeLayer.NorthEast => DirectionFlag.NorthEast,
-            EdgeLayer.NorthWest => DirectionFlag.NorthWest,
-            EdgeLayer.SouthEast => DirectionFlag.SouthEast,
-            EdgeLayer.SouthWest => DirectionFlag.SouthWest,
-            _ => throw new ArgumentOutOfRangeException(),
-        };
     }
 }

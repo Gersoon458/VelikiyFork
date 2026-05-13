@@ -32,22 +32,6 @@ public sealed partial class IconSmoothSystem : EntitySystem
         sprite.LayerSetState(CornerLayers.SE, $"{smooth.StateBase}{(int) cornerSE}");
         sprite.LayerSetState(CornerLayers.SW, $"{smooth.StateBase}{(int) cornerSW}");
         sprite.LayerSetState(CornerLayers.NW, $"{smooth.StateBase}{(int) cornerNW}");
-
-        var directions = DirectionFlag.None;
-
-        if ((cornerSE & cornerSW) != CornerFill.None)
-            directions |= DirectionFlag.South;
-
-        if ((cornerSE & cornerNE) != CornerFill.None)
-            directions |= DirectionFlag.East;
-
-        if ((cornerNE & cornerNW) != CornerFill.None)
-            directions |= DirectionFlag.North;
-
-        if ((cornerNW & cornerSW) != CornerFill.None)
-            directions |= DirectionFlag.West;
-
-        UpdateEdge(entity, directions, sprite);
     }
 
     private (CornerFill ne, CornerFill nw, CornerFill sw, CornerFill se) CalculateCornerFill(MapGridComponent grid, IconSmoothComponent smooth, TransformComponent xform)
@@ -125,7 +109,6 @@ public sealed partial class IconSmoothSystem : EntitySystem
         if (grid == null)
         {
             sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
-            UpdateEdge(entity, DirectionFlag.None, sprite);
             return;
         }
 
@@ -140,19 +123,6 @@ public sealed partial class IconSmoothSystem : EntitySystem
             dirs |= CardinalConnectDirs.West;
 
         sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
-
-        var directions = DirectionFlag.None;
-
-        if ((dirs & CardinalConnectDirs.South) != 0x0)
-            directions |= DirectionFlag.South;
-        if ((dirs & CardinalConnectDirs.East) != 0x0)
-            directions |= DirectionFlag.East;
-        if ((dirs & CardinalConnectDirs.North) != 0x0)
-            directions |= DirectionFlag.North;
-        if ((dirs & CardinalConnectDirs.West) != 0x0)
-            directions |= DirectionFlag.West;
-
-        UpdateEdge(entity, directions, sprite);
     }
 
     private void CalculateNewSpriteDiagonal(Entity<IconSmoothComponent, SpriteComponent> entity, MapGridComponent? grid, TransformComponent xform)
@@ -163,7 +133,6 @@ public sealed partial class IconSmoothSystem : EntitySystem
         if (grid == null)
         {
             sprite.LayerSetState(0, $"{smooth.StateBase}0");
-            UpdateEdge(entity, DirectionFlag.None, sprite);
             return;
         }
         var neighbors = new Direction[]
@@ -199,7 +168,6 @@ public sealed partial class IconSmoothSystem : EntitySystem
         if (grid == null)
         {
             sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
-            UpdateEdge(entity, DirectionFlag.None, sprite);
             return;
         }
         var ourDir = xform.LocalRotation.GetDir();
@@ -211,15 +179,6 @@ public sealed partial class IconSmoothSystem : EntitySystem
             dirs |= CardinalConnectDirs.West;
 
         sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
-
-        var directions = DirectionFlag.None;
-
-        if ((dirs & CardinalConnectDirs.East) != 0x0)
-            directions |= DirectionFlag.East;
-        if ((dirs & CardinalConnectDirs.West) != 0x0)
-            directions |= DirectionFlag.West;
-
-        UpdateEdge(entity, directions, sprite);
 
         bool sameRotPredicate(EntityUid uid) => Transform(uid).LocalRotation.GetDir() == ourDir;
     }
@@ -233,7 +192,6 @@ public sealed partial class IconSmoothSystem : EntitySystem
         if (grid == null)
         {
             sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
-            UpdateEdge(entity, DirectionFlag.None, sprite);
             return;
         }
         var ourDir = xform.LocalRotation.GetDir();
@@ -245,15 +203,6 @@ public sealed partial class IconSmoothSystem : EntitySystem
             dirs |= CardinalConnectDirs.South;
 
         sprite.LayerSetState(0, $"{smooth.StateBase}{(int) dirs}");
-
-        var directions = DirectionFlag.None;
-
-        if ((dirs & CardinalConnectDirs.South) != 0x0)
-            directions |= DirectionFlag.South;
-        if ((dirs & CardinalConnectDirs.North) != 0x0)
-            directions |= DirectionFlag.North;
-
-        UpdateEdge(entity, directions, sprite);
 
         bool sameRotPredicate(EntityUid uid) => Transform(uid).LocalRotation.GetDir() == ourDir;
     }
