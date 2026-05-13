@@ -33,10 +33,16 @@ public sealed partial class IconSmoothComponent : Component
     public string? SmoothKey { get; private set; }
 
     /// <summary>
-    ///     Additional keys to smooth with.
+    ///     A list of keys to smooth with. If null, will default to smoothing with entities that have the same SmoothKey.
     /// </summary>
     [DataField]
-    public List<string> AdditionalKeys = new();
+    public List<string>? MatchKeys = null;
+
+    /// <summary>
+    ///     A list of keys to smooth with. If null, will default to smoothing with entities that have the same SmoothKey.
+    /// </summary>
+    [DataField]
+    public List<string>? EdgeMatchKeys = null;
 
     /// <summary>
     ///     Prepended to the RSI state.

@@ -292,19 +292,19 @@ namespace Content.Client.IconSmoothing
         }
 
 
-        private bool MatchingEntity(IconSmoothComponent smooth, MapGridComponent grid, Vector2i tilePosition, Direction offsetDirection, Angle? entityRotation = null, Func<EntityUid, bool>? predicate = null) =>
-            MatchingEntity(smooth, grid, tilePosition, offsetDirection, out _, entityRotation, predicate);
+        private bool MatchingEntity(IconSmoothComponent smooth, MapGridComponent grid, Vector2i tilePosition, Direction offsetDirection, Angle? entityRotation = null, Func<EntityUid, bool>? predicate = null, bool edge = false) =>
+            MatchingEntity(smooth, grid, tilePosition, offsetDirection, out _, entityRotation, predicate, edge);
 
-        private bool MatchingEntity(IconSmoothComponent smooth, MapGridComponent grid, Vector2i tilePosition, Direction offsetDirection, [NotNullWhen(true)] out EntityUid? entity, Angle? entityRotation = null, Func<EntityUid, bool>? predicate = null)
+        private bool MatchingEntity(IconSmoothComponent smooth, MapGridComponent grid, Vector2i tilePosition, Direction offsetDirection, [NotNullWhen(true)] out EntityUid? entity, Angle? entityRotation = null, Func<EntityUid, bool>? predicate = null, bool edge = false)
         {
             if(entityRotation is Angle rot)
                 offsetDirection = rot.RotateDir(offsetDirection);
 
-            return MatchingEntity(smooth, _map.GetAnchoredEntitiesEnumerator(grid.Owner, grid, tilePosition.Offset(offsetDirection)), out entity, predicate);
+            return MatchingEntity(smooth, _map.GetAnchoredEntitiesEnumerator(grid.Owner, grid, tilePosition.Offset(offsetDirection)), out entity, predicate, edge);
 
         }
-        private bool MatchingEntity(IconSmoothComponent smooth, AnchoredEntitiesEnumerator candidates, Func<EntityUid, bool>? predicate = null) => MatchingEntity(smooth, candidates, out _, predicate);
-        private bool MatchingEntity(IconSmoothComponent smooth, AnchoredEntitiesEnumerator candidates, [NotNullWhen(true)] out EntityUid? entity, Func<EntityUid, bool>? predicate = null)
+        private bool MatchingEntity(IconSmoothComponent smooth, AnchoredEntitiesEnumerator candidates, Func<EntityUid, bool>? predicate = null, bool edge = false) => MatchingEntity(smooth, candidates, out _, predicate, edge);
+        private bool MatchingEntity(IconSmoothComponent smooth, AnchoredEntitiesEnumerator candidates, [NotNullWhen(true)] out EntityUid? entity, Func<EntityUid, bool>? predicate = null, bool edge = false)
         {
             while (candidates.MoveNext(out entity)) // MoveNext() assigns null at its last call
             {
@@ -312,7 +312,8 @@ namespace Content.Client.IconSmoothing
                     continue;
                 if (smooth.SmoothKey is null || other.SmoothKey is null)
                     continue;
-                if (smooth.SmoothKey != other.SmoothKey && !smooth.AdditionalKeys.Contains(other.SmoothKey))
+                var keys = edge ? smooth.EdgeMatchKeys : smooth.MatchKeys;
+                if (keys is null ? smooth.SmoothKey != other.SmoothKey : !keys.Contains(other.SmoothKey)) // ternary inside if, because fuck you
                     continue;
 
                 if (predicate is null || predicate(entity.Value))

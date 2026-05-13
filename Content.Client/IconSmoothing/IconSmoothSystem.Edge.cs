@@ -34,21 +34,21 @@ public sealed partial class IconSmoothSystem
         {
             var pos = _map.TileIndicesFor(gridUid, grid, xform.Coordinates);
 
-            if (MatchingEntity(smooth, grid, pos, Direction.North, xform.LocalRotation))
+            if (MatchingEntity(smooth, grid, pos, Direction.North, xform.LocalRotation, null, true))
                 directions |= EdgeLayer.North;
-            if (MatchingEntity(smooth, grid, pos, Direction.South, xform.LocalRotation))
+            if (MatchingEntity(smooth, grid, pos, Direction.South, xform.LocalRotation, null, true))
                 directions |= EdgeLayer.South;
-            if (MatchingEntity(smooth, grid, pos, Direction.East, xform.LocalRotation))
+            if (MatchingEntity(smooth, grid, pos, Direction.East, xform.LocalRotation, null, true))
                 directions |= EdgeLayer.East;
-            if (MatchingEntity(smooth, grid, pos, Direction.West, xform.LocalRotation))
+            if (MatchingEntity(smooth, grid, pos, Direction.West, xform.LocalRotation, null, true))
                 directions |= EdgeLayer.West;
-            if (MatchingEntity(smooth, grid, pos, Direction.NorthEast, xform.LocalRotation))
+            if (MatchingEntity(smooth, grid, pos, Direction.NorthEast, xform.LocalRotation, null, true))
                 directions |= EdgeLayer.NorthEast;
-            if (MatchingEntity(smooth, grid, pos, Direction.NorthWest, xform.LocalRotation))
+            if (MatchingEntity(smooth, grid, pos, Direction.NorthWest, xform.LocalRotation, null, true))
                 directions |= EdgeLayer.NorthWest;
-            if (MatchingEntity(smooth, grid, pos, Direction.SouthEast, xform.LocalRotation))
+            if (MatchingEntity(smooth, grid, pos, Direction.SouthEast, xform.LocalRotation, null, true))
                 directions |= EdgeLayer.SouthEast;
-            if (MatchingEntity(smooth, grid, pos, Direction.SouthWest, xform.LocalRotation))
+            if (MatchingEntity(smooth, grid, pos, Direction.SouthWest, xform.LocalRotation, null, true))
                 directions |= EdgeLayer.SouthWest;
         }
 
