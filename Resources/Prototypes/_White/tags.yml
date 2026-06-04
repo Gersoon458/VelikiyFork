@@ -60,3 +60,12 @@
 
 - type: Tag
   id: DeleteOnGamerule
+
+- type: Tag
+  id: SlimeEmotes
+
+- type: Tag
+  id: MothEmotes
+  
+- type: Tag
+  id: MortarGrenade
