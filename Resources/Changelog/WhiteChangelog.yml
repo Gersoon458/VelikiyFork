@@ -5412,3 +5412,53 @@ Entries:
   id: 564
   time: '2026-06-18T11:50:25.0000000+00:00'
   url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1122
+- author: Sevassstyan
+  changes:
+    - type: Add
+      message: Принтеры там где их не было
+    - type: Add
+      message: Коморка шаттлостроителей на Мету
+    - type: Tweak
+      message: Много-много различных мелкоизменений
+  id: 565
+  time: '2026-06-23T13:10:30.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1159
+- author: Cinkafox
+  changes:
+    - type: Tweak
+      message: upadte Lidgren.Network
+    - type: Add
+      message: network filtering
+  id: 566
+  time: '2026-06-28T13:23:28.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1166
+- author: Pedro-233
+  changes:
+    - type: Add
+      message: Добавлен энергощит в набор Raider
+    - type: Tweak
+      message: Гадюки в наборах синдиката изменены на новый аналог MPR-10 Xyphos
+  id: 567
+  time: '2026-07-01T10:57:19.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1112
+- author: Pedro-233
+  changes:
+    - type: Tweak
+      message: Изменены углы, формы того как лежат некоторые предметы в хранилищах
+  id: 568
+  time: '2026-07-01T11:01:04.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1121
+- author: Pedro-233
+  changes:
+    - type: Remove
+      message: Удалена приписка "Сервер:" к сообщениям
+  id: 569
+  time: '2026-07-01T11:06:24.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1156
+- author: SentryPrimies
+  changes:
+    - type: Add
+      message: Добавлены новые  Спрайты для цветных комбинезонов и Людей
+  id: 570
+  time: '2026-07-03T18:21:57.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1136
