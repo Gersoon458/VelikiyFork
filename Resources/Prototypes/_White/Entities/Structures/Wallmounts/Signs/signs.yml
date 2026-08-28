@@ -6,7 +6,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: ame
+    layers:
+    - state: ame
+    - state: ame
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -16,7 +20,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: arrivals
+    layers:
+    - state: arrivals
+    - state: arrivals
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -26,7 +34,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: anchor
+    layers:
+    - state: anchor
+    - state: anchor
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -36,7 +48,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: boxing
+    layers:
+    - state: boxing
+    - state: boxing
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -46,7 +62,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: brig
+    layers:
+    - state: brig
+    - state: brig
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -56,7 +76,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: captain
+    layers:
+    - state: captain
+    - state: captain
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -66,7 +90,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: dorms
+    layers:
+    - state: dorms
+    - state: dorms
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -76,7 +104,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: equip
+    layers:
+    - state: equip
+    - state: equip
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -86,7 +118,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: evac
+    layers:
+    - state: evac
+    - state: evac
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -96,7 +132,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: gate
+    layers:
+    - state: gate
+    - state: gate
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -106,7 +146,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: genetics
+    layers:
+    - state: genetics
+    - state: genetics
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -116,7 +160,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: hydro
+    layers:
+    - state: hydro
+    - state: hydro
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -126,7 +174,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: hop
+    layers:
+    - state: hop
+    - state: hop
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -136,7 +188,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: check
+    layers:
+    - state: check
+    - state: check
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -146,7 +202,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: court
+    layers:
+    - state: court
+    - state: court
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -156,7 +216,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: nukevault
+    layers:
+    - state: nukevault
+    - state: nukevault
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -166,7 +230,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: pa
+    layers:
+    - state: pa
+    - state: pa
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -176,7 +244,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: smes
+    layers:
+    - state: smes
+    - state: smes
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -186,7 +258,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: solar
+    layers:
+    - state: solar
+    - state: solar
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -196,7 +272,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: storage
+    layers:
+    - state: storage
+    - state: storage
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -206,7 +286,11 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: theatre
+    layers:
+    - state: theatre
+    - state: theatre
+      color: "#ffffff05"
+      shader: unshaded
 
 - type: entity
   parent: BaseSign
@@ -216,4 +300,8 @@
   components:
   - type: Sprite
     sprite: _White/Structures/Wallmounts/Signs/34x34.rsi
-    state: toilet
+    layers:
+    - state: toilet
+    - state: toilet
+      color: "#ffffff05"
+      shader: unshaded

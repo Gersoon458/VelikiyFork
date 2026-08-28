@@ -1,0 +1,33 @@
+{
+   "version":1,
+   "size":{
+      "x":36,
+      "y":36
+   },
+   "license":"CC-BY-NC-SA-4.0",
+   "copyright":"Gersoon(gersoon458) for WWhiteDreamProject, 28.08.2026",
+   "states":[
+       { "name": "painting0", "directions":4 },
+       { "name": "painting1", "directions":4 },
+       { "name": "painting2", "directions":4 },
+       { "name": "painting3", "directions":4 },
+       { "name": "painting4", "directions":4 },
+       { "name": "painting5", "directions":4 },
+       { "name": "painting6", "directions":4 },
+       { "name": "painting7", "directions":4 },
+       { "name": "painting8", "directions":4 },
+       { "name": "painting9", "directions":4 },
+       { "name": "painting10", "directions":4 },
+       { "name": "painting11", "directions":4 },
+       { "name": "painting12", "directions":4 },
+       { "name": "painting13", "directions":4 },
+       { "name": "painting14", "directions":4 },
+       { "name": "painting15", "directions":4 },
+       { "name": "painting16", "directions":4 },
+       { "name": "painting17", "directions":4 },
+       { "name": "painting18", "directions":4 },
+       { "name": "painting19", "directions":4 },
+       { "name": "painting20", "directions":4 },
+       { "name": "painting21", "directions":4 }
+   ]
+}

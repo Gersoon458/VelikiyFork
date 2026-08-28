@@ -1,0 +1,159 @@
+{
+   "version":1,
+   "size":{
+      "x":34,
+      "y":34
+   },
+   "license":"CC-BY-NC-SA-4.0",
+   "copyright":"Gersoon(gersoon458) for WWhiteDreamProject, 20.08.2026",
+   "states":[
+      {
+         "name": "poster_base",
+         "directions":4
+      },
+      {
+         "name": "poster_broken",
+         "directions":4
+      },
+      {
+         "name": "random_anything",
+         "directions":4
+      },
+      {
+         "name": "random_contraband",
+         "directions":4
+      },
+      {
+         "name": "random_legit",
+         "directions":4
+      },
+      {
+         "name": "contraband1",
+         "directions":4
+      },
+      {
+         "name": "contraband2",
+         "directions":4
+      },
+      {
+         "name": "contraband3",
+         "directions":4
+      },
+      {
+         "name": "contraband4",
+         "directions":4
+      },
+      {
+         "name": "contraband5",
+         "directions":4
+      },
+      {
+         "name": "contraband6",
+         "directions":4
+      },
+      {
+         "name": "contraband7",
+         "directions":4
+      },
+      {
+         "name": "contraband8",
+         "directions":4
+      },
+      {
+         "name": "contraband9",
+         "directions":4
+      },
+      {
+         "name": "contraband10",
+         "directions":4
+      },
+      {
+         "name": "contraband11",
+         "directions":4
+      },
+      {
+         "name": "contraband12",
+         "directions":4
+      },
+      {
+         "name": "contraband14",
+         "directions":4
+      },
+      {
+         "name": "contraband15",
+         "directions":4
+      },
+      {
+         "name": "contraband25",
+         "directions":4
+      },
+      {
+         "name": "contraband37",
+         "directions":4
+      },
+      {
+         "name": "contraband38",
+         "directions":4
+      },
+      {
+         "name": "contraband41",
+         "directions":4
+      },
+      {
+         "name": "contraband43",
+         "directions":4
+      },
+      {
+         "name": "contraband52",
+         "directions":4
+      },
+      {
+         "name": "contraband54",
+         "directions":4
+      },
+      {
+         "name": "contraband56",
+         "directions":4
+      },
+      {
+         "name": "legit2",
+         "directions":4
+      },
+      {
+         "name": "legit3",
+         "directions":4
+      },
+      {
+         "name": "legit4",
+         "directions":4
+      },
+      {
+         "name": "legit5",
+         "directions":4
+      },
+      {
+         "name": "legit7",
+         "directions":4
+      },
+      {
+         "name": "legit10",
+         "directions":4
+      },
+      {
+         "name": "legit17",
+         "directions":4
+      },
+      {
+         "name": "legit19",
+         "directions":4
+      },
+      {
+         "name": "legit20",
+         "directions":4
+      },
+      {
+         "name": "legit40",
+         "directions":4
+      }
+   ]
+}

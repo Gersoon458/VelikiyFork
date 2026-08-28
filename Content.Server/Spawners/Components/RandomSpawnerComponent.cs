@@ -19,5 +19,10 @@ namespace Content.Server.Spawners.Components
 
         [DataField]
         public bool DeleteSpawnerAfterSpawn = true;
+
+        // WWDP edit start
+        [DataField]
+        public bool TransferRotation = false;
+        // WWDP edit end
     }
 }

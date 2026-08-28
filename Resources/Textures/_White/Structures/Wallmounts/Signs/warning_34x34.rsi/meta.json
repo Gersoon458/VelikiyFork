@@ -1,0 +1,71 @@
+{
+   "version":1,
+   "size":{
+      "x":34,
+      "y":34
+   },
+   "license":"CC-BY-NC-SA-4.0",
+   "copyright":"Gersoon(gersoon458) for WWhiteDreamProject, 10.08.2026",
+   "states":[
+      {
+         "name": "acid",
+         "directions":4
+      },
+      {
+         "name": "base",
+         "directions":4
+      },
+      {
+         "name": "biohazard",
+         "directions":4
+      },
+      {
+         "name": "canisters",
+         "directions":4
+      },
+      {
+         "name": "cryo",
+         "directions":4
+      },
+      {
+         "name": "cutting",
+         "directions":4
+      },
+      {
+         "name": "electrical",
+         "directions":4
+      },
+      {
+         "name": "explosive",
+         "directions":4
+      },
+      {
+         "name": "flammable",
+         "directions":4
+      },
+      {
+         "name": "gravitation",
+         "directions":4
+      },
+      {
+         "name": "laser",
+         "directions":4
+      },
+      {
+         "name": "magnetic",
+         "directions":4
+      },
+      {
+         "name": "radiation",
+         "directions":4
+      },
+      {
+         "name": "secure",
+         "directions":4
+      },
+      {
+         "name": "sec_secure",
+         "directions":4
+      }
+   ]
+}

@@ -1,0 +1,366 @@
+- type: entity
+  parent: BaseSign
+  id: SignWarningBase
+  name: warning sign
+  description: A sign warning of a nothing hazard.
+  components:
+  - type: Sprite
+    sprite: _White/Structures/Wallmounts/Signs/warning_34x34.rsi
+    layers:
+    - state: base
+    - state: base
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningAcid
+  name: warning sign "acid"
+  description: A sign warning of a corrosive hazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: acid
+    - state: acid
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningBiohazard
+  name: warning sign "biohazard"
+  description: A sign warning of a biohazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: biohazard
+    - state: biohazard
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningCanisters
+  name: warning sign "canisters"
+  description: A sign warning of a canisters.
+  components:
+  - type: Sprite
+    layers:
+    - state: canisters
+    - state: canisters
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningCryo
+  name: warning sign "cryohazard"
+  description: A sign warning of a cryohazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: cryo
+    - state: cryo
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningCutting
+  name: warning sign "cutting hazard"
+  description: A sign warning of a cutting hazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: cutting
+    - state: cutting
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningElectricity
+  name: warning sign "electricity"
+  description: A sign warning of a electrical hazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: electrical
+    - state: electrical
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningExplosive
+  name: warning sign "explosive"
+  description: A sign warning of a explosive hazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: explosive
+    - state: explosive
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningFlammable
+  name: warning sign "flammable"
+  description: A sign warning of a flammable hazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: flammable
+    - state: flammable
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningGravitation
+  name: warning sign "gravitation"
+  description: A sign warning of a gravitational hazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: gravitation
+    - state: gravitation
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningLaser
+  name: warning sign "laser"
+  description: A sign warning of a laser hazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: laser
+    - state: laser
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningMagnetic
+  name: warning sign "magnetic field"
+  description: A sign warning of a magnetic field hazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: magnetic
+    - state: magnetic
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningRadiation
+  name: warning sign "radiation"
+  description: A sign warning of a radiation hazard.
+  components:
+  - type: Sprite
+    layers:
+    - state: radiation
+    - state: radiation
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningSecure
+  name: warning sign "secure"
+  description: A sign warning of a secure.
+  components:
+  - type: Sprite
+    layers:
+    - state: secure
+    - state: secure
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningSecureRed
+  name: red warning sign "secure"
+  description: A red sign warning of a closed area.
+  components:
+  - type: Sprite
+    layers:
+    - state: sec_secure
+    - state: sec_secure
+      color: "#ffffff0d"
+      shader: unshaded
+
+# Atmos warning
+- type: entity
+  parent: SignWarningBase
+  id: SignWarningAtmosBase
+  name: warning sign
+  description: This is a warning sign, but there is no text on it.
+  components:
+  - type: Sprite
+    sprite: _White/Structures/Wallmounts/Signs/atmos_34x34.rsi
+    layers:
+    - state: base
+    - state: base
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosText
+  name: warning sign with text
+  description: This is a warning sign with small font text.
+  components:
+  - type: Sprite
+    layers:
+    - state: text
+    - state: text
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosNothing
+  name: warning sign "nothing"
+  description: WARNING! Nothing flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: nothing
+    - state: nothing
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosAir
+  name: warning sign "air"
+  description: WARNING! Air flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: air
+    - state: air
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosAmmonia
+  name: warning sign "ammonia"
+  description: WARNING! Ammonia flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: ammonia
+    - state: ammonia
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosCO2
+  name: warning sign "CO2"
+  description: WARNING! CO2 flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: co2
+    - state: co2
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosSteam
+  name: warning sign "steam"
+  description: WARNING! Steam flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: h2o
+    - state: h2o
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosN2
+  name: warning sign "N2"
+  description: WARNING! N2 flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: n2
+    - state: n2
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosN2O
+  name: warning sign "N2O"
+  description: WARNING! N2O flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: n2o
+    - state: n2o
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosO2
+  name: warning sign "O2"
+  description: WARNING! O2 flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: o2
+    - state: o2
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosPlasma
+  name: warning sign "plasma"
+  description: WARNING! Plasma flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: plasma
+    - state: plasma
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosWaste
+  name: warning sign "waste"
+  description: WARNING! Waste flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: waste
+    - state: waste
+      color: "#ffffff0d"
+      shader: unshaded
+
+- type: entity
+  parent: SignWarningAtmosBase
+  id: SignWarningAtmosTritium
+  name: warning sign "tritium"
+  description: WARNING! Tritium flow tube. Ensure the flow is disengaged before working.
+  components:
+  - type: Sprite
+    layers:
+    - state: tritium
+    - state: tritium
+      color: "#ffffff0d"
+      shader: unshaded

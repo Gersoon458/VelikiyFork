@@ -16,6 +16,7 @@ namespace Content.Server.Spawners.EntitySystems
         [Dependency] private readonly IRobustRandom _robustRandom = default!;
         [Dependency] private readonly GameTicker _ticker = default!;
         [Dependency] private readonly EntityTableSystem _entityTable = default!;
+        [Dependency] private readonly SharedTransformSystem _xformSys = default!; // WWDP edit
 
         public override void Initialize()
         {
@@ -107,7 +108,9 @@ namespace Content.Server.Spawners.EntitySystems
         {
             if (component.RarePrototypes.Count > 0 && (component.RareChance == 1.0f || _robustRandom.Prob(component.RareChance)))
             {
-                EntityManager.SpawnEntity(_robustRandom.Pick(component.RarePrototypes), Transform(uid).Coordinates);
+                var rareEnt = EntityManager.SpawnEntity(_robustRandom.Pick(component.RarePrototypes), Transform(uid).Coordinates);
+                if (component.TransferRotation)
+                    _xformSys.SetLocalRotation(rareEnt, Transform(uid).LocalRotation);
                 return;
             }
 
@@ -129,7 +132,9 @@ namespace Content.Server.Spawners.EntitySystems
 
             var coordinates = Transform(uid).Coordinates.Offset(new Vector2(xOffset, yOffset));
 
-            EntityManager.SpawnEntity(_robustRandom.Pick(component.Prototypes), coordinates);
+            var spawnedEnt = EntityManager.SpawnEntity(_robustRandom.Pick(component.Prototypes), coordinates);
+            if (component.TransferRotation)
+                _xformSys.SetLocalRotation(spawnedEnt, Transform(uid).LocalRotation);
         }
 
         private void Spawn(Entity<EntityTableSpawnerComponent> ent)

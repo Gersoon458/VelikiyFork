@@ -1,12 +1,3 @@
-- type: entity
-  parent: BaseSign
-  id: PaintingMonkey
-  name: monkey painting
-  description: Return to monky.
-  components:
-  - type: Sprite
-    state: monkey_painting
-
 # Directional Station Guide Signs
 - type: entity
   parent: BaseSign
@@ -251,8 +242,12 @@
   description: A sign, indicating an AI is present.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: ai
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: ai
+    - state: ai
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -261,8 +256,12 @@
   description: A sign, indicating an AI is present.
   components:
     - type: Sprite
-      sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-      state: ai_upload
+      sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+      layers:
+      - state: ai_upload
+      - state: ai_upload
+        color: "#ffffff05"
+        shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -271,8 +270,12 @@
   description: A sign indicating the arcade.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: arcade
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: arcade
+    - state: arcade
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -281,8 +284,12 @@
   description: A sign indicating the armory.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: armory
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: armory
+    - state: armory
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -291,8 +298,12 @@
   description: A sign indicating the tool storage room.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: tool # WWDP edit
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: tool
+    - state: tool
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -301,8 +312,12 @@
   description: A sign indicating the xenoarchaeology lab.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: xenoarch
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: xenoarch
+    - state: xenoarch
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -311,8 +326,12 @@
   description: A sign indicating the anomalous research lab.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: anomaly
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: anomaly
+    - state: anomaly
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -321,8 +340,12 @@
   description: A sign indicating the atmospherics area.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: atmos
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: atmos
+    - state: atmos
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -331,8 +354,12 @@
   description: A sign indicating the bar.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: bar
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: bar
+    - state: bar
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -341,8 +368,12 @@
   description: A sign indicating the bathroom.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: bath
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: bath
+    - state: bath
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -351,8 +382,12 @@
   description: The heart of the home. And disease.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: kitchen
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: kitchen
+    - state: kitchen
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -378,8 +413,12 @@
   description: A sign indicating the barbershop.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: barbershop
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: barbershop
+    - state: barbershop
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -406,8 +445,12 @@
   description: A sign indicating the bridge.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: bridge
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: bridge
+    - state: bridge
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -416,8 +459,12 @@
   description: A sign warning the viewer about pressurised canisters.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: cans
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: cans
+    - state: cans
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -426,8 +473,12 @@
   description: A sign indicating the logistics area. # DeltaV - Logistics Department replacing Cargo
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: cargo
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: cargo
+    - state: cargo
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -436,8 +487,12 @@
   description: A sign indicating a cargo dock.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: cargo_dock
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: cargo_dock
+    - state: cargo_dock
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -446,8 +501,12 @@
   description: A sign indicating the chapel.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: chapel
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: chapel
+    - state: chapel
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -456,8 +515,12 @@
   description: A sign indicating the chemistry lab.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: chem
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: chem
+    - state: chem
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -466,8 +529,12 @@
   description: A sign indicating the cloning lab.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: cloning
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: cloning
+    - state: cloning
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -476,8 +543,12 @@
   description: Where work happens.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: conference_room
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: conference_room
+    - state: conference_room
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -486,7 +557,12 @@
   description: Just like that? You're gonna chicken out?
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: cryo
+    - state: cryo
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
     state: cryo
 
 
@@ -497,8 +573,12 @@
   description: A sign indicating a disposal area.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: deathsposal
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: deathsposal
+    - state: deathsposal
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -507,8 +587,12 @@
   description: A sign indicating doors.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: doors
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: doors
+    - state: doors
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -526,8 +610,12 @@
   description: An omen to the juicy vault of steel, glass, and plastic that lays before you.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: mats
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: mats
+    - state: mats
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -536,8 +624,12 @@
   description: Where the powa happens.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: engine
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: engine
+    - state: engine
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -546,8 +638,12 @@
   description: A sign indicating the engineering area.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: eng
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: eng
+    - state: eng
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -556,8 +652,12 @@
   description: A sign indicating the escape pods.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: pods
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: pods
+    - state: pods
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -566,8 +666,12 @@
   description: A sign indicating an EVA area. EVA equipment may be required beyond this point.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: eva
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: eva
+    - state: eva
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -585,8 +689,12 @@
   description: A sign indicating a medical examination room.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: examroom
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: examroom
+    - state: examroom
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -604,8 +712,12 @@
   description: A sign indicating the gravity generator.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: gravi
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: gravi
+    - state: gravi
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -614,8 +726,12 @@
   description: An official sign indicating the dwellings of a Nanotrasen-certified head of department.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: commander
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: commander
+    - state: commander
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -624,8 +740,12 @@
   description: A sign indicating a hydroponics area.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: hydro
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: hydro
+    - state: hydro
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -634,8 +754,12 @@
   description: A sign indicating an interrogation room.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: interrogation
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: interrogation
+    - state: interrogation
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -644,8 +768,12 @@
   description: A sign labelling an area where the janitor works.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: janitor
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: janitor
+    - state: janitor
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -654,8 +782,12 @@
   description: A sign indicating the laundromat.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: laundromat
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: laundromat
+    - state: laundromat
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -664,8 +796,12 @@
   description: A sign indicating the presence of the (typically absent) rule of law.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: law
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: law
+    - state: law
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -674,8 +810,12 @@
   description: A sign indicating the library.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: biblio
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: biblio
+    - state: biblio
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -684,8 +824,12 @@
   description: A sign indicating mail.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: mail
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: mail
+    - state: mail
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -694,8 +838,12 @@
   description: A sign indicating the medical bay.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: medbay
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: medbay
+    - state: medbay
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -704,8 +852,12 @@
   description: A sign indicating the morgue.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: morgue
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: morgue
+    - state: morgue
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -714,8 +866,12 @@
   description: A sign indicating where the Reporter works.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: news
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: news
+    - state: news
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -733,8 +889,12 @@
   description: A sign indicating the prison.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: prison
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: prison
+    - state: prison
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -743,8 +903,12 @@
   description: A sign labelling an area where the Psychologist works.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: psychology
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: psychology
+    - state: psychology
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -753,8 +917,12 @@
   description: A sign indicating the reception.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: reception
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: reception
+    - state: reception
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -763,8 +931,12 @@
   description: A sign indicating the research and development lab.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: rnd
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: rnd
+    - state: rnd
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -773,8 +945,12 @@
   description: A sign indicating the robotics lab.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: robo
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: robo
+    - state: robo
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -783,8 +959,12 @@
   description: A sign indicating the salvage area.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: salvage
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: salvage
+    - state: salvage
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -793,8 +973,12 @@
   description: A sign indicating the science area.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: sci
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: sci
+    - state: sci
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -803,8 +987,12 @@
   description: Ever heard of Big Data? This is it, chump. The biggest.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: data
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: data
+    - state: data
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -813,8 +1001,12 @@
   description: A sign indicating the auspicious presence of gas canisters.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: cans_sci
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: cans_sci
+    - state: cans_sci
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: SignCans
@@ -831,8 +1023,12 @@
   description: A sign indicating the where the evac shuttle will (likely) arrive.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: dock
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: dock
+    - state: dock
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -841,8 +1037,12 @@
   description: A sign warning that the area ahead is nothing but cold, empty space.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: space
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: space
+    - state: space
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -851,8 +1051,12 @@
   description: A sign indicating the operating theater.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: surgery
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: surgery
+    - state: surgery
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -861,8 +1065,12 @@
   description: A sign indicating the telecommunications room.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: telecoms
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: telecoms
+    - state: telecoms
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -871,8 +1079,12 @@
   description: A sign indicating the toxin lab.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: toxins
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: toxins
+    - state: toxins
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -890,8 +1102,12 @@
   description: A sign indicating the virology lab.
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: virology
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: virology
+    - state: virology
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign
@@ -1036,8 +1252,12 @@
   description: The final remains of a shut-down Nanotrasen research project that aimed to harness the powers of Romerol. I wonder how that went...
   components:
   - type: Sprite
-    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit
-    state: zomlab
+    sprite: _White/Structures/Wallmounts/Signs/34x34.rsi # WWDP edit start
+    layers:
+    - state: zomlab
+    - state: zomlab
+      color: "#ffffff05"
+      shader: unshaded # WWDP edit end
 
 - type: entity
   parent: BaseSign

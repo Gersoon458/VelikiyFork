@@ -1,5 +1,5 @@
-ent-PosterBase = { ent-BaseSign }
-    .desc = { ent-BaseSign.desc }
+ent-PosterBase = пустой плакат
+    .desc = Похоже, кто-то забыл напечатать этот плакат.
     .suffix = { "" }
 
 ent-PosterBroken = порванный плакат

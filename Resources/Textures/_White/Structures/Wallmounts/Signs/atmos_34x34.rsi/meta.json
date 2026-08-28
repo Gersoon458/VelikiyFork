@@ -1,0 +1,63 @@
+{
+   "version":1,
+   "size":{
+      "x":34,
+      "y":34
+   },
+   "license":"CC-BY-NC-SA-4.0",
+   "copyright":"Gersoon(gersoon458) for WWhiteDreamProject, 10.08.2026",
+   "states":[
+      {
+         "name": "air",
+         "directions":4
+      },
+      {
+         "name": "ammonia",
+         "directions":4
+      },
+      {
+         "name": "base",
+         "directions":4
+      },
+      {
+         "name": "co2",
+         "directions":4
+      },
+      {
+         "name": "h2o",
+         "directions":4
+      },
+      {
+         "name": "n2",
+         "directions":4
+      },
+      {
+         "name": "n2o",
+         "directions":4
+      },
+      {
+         "name": "nothing",
+         "directions":4
+      },
+      {
+         "name": "o2",
+         "directions":4
+      },
+      {
+         "name": "plasma",
+         "directions":4
+      },
+      {
+         "name": "text",
+         "directions":4
+      },
+      {
+         "name": "waste",
+         "directions":4
+      },
+      {
+         "name": "tritium",
+         "directions":4
+      }
+   ]
+}
