@@ -2,78 +2,88 @@ ent-PaintingBase = { ent-BaseSign }
     .desc = { ent-BaseSign.desc }
     .suffix = { "" }
 
-ent-PaintingEmpty = пустая рама
+ent-Painting0Empty = пустая рама
     .desc = Пустая рама, ожидающая, когда её наполнят искусством.
     .suffix = { "" }
 
-ent-PaintingMoony = Абстракция №1
+ent-Painting1Moony = Абстракция №1
     .desc = Внушительная абстрактная картина. Чувствуется, как она давит на вас, заставляя творить добро.
     .suffix = { "" }
 
-ent-PaintingPersistenceOfMemory = Постоянство памяти
+ent-Painting2PersistenceOfMemory = Постоянство памяти
     .desc = На этой картине изображён бесплодный пейзаж. Он наполнен различными сюрреалистическими объектами.
     .suffix = { "" }
 
-ent-PaintingTheSonOfMan = Сын человеческий
+ent-Painting3TheSonOfMan = Сын человеческий
     .desc = На этой картине изображен строго одетый мужчина. Его лицо закрывает яблоко.
     .suffix = { "" }
 
-ent-PaintingTheKiss = Поцелуй
+ent-Painting4TheKiss = Поцелуй
     .desc = На этой картине изображена пара в нежных объятиях. Она покрыта блестящими золотыми орнаментами.
     .suffix = { "" }
 
-ent-PaintingTheScream = Крик
+ent-Painting5TheScream = Крик
     .desc = На этой картине изображен потрясённый мужчина, который стоит на мосту.
     .suffix = { "" }
 
-ent-PaintingTheGreatWave = Большая волна в Канагаве
+ent-Painting6TheGreatWave = Большая волна в Канагаве
     .desc = На этой картине изображена величественная волна. Она окатывает несколько маленьких рыбацких лодок.
     .suffix = { "" }
 
-ent-PaintingCafeTerraceAtNight = Ночная терраса кафе
+ent-Painting7CafeTerraceAtNight = Ночная терраса кафе
     .desc = На этой картине изображена оживлённая ночная сцена в кафе.
     .suffix = { "" }
 
-ent-PaintingNightHawks = Полуночники
+ent-Painting8NightHawks = Полуночники
     .desc = На этой картине изображена одиноко выглядящая закусочная. Посетители угрюмо сидят за стойкой.
     .suffix = { "" }
 
-ent-PaintingSkeletonCigarette = Череп скелета с зажжённой сигаретой
+ent-Painting9SkeletonCigarette = Череп скелета с зажжённой сигаретой
     .desc = На этой картине изображен импрессионистский портрет скелета. Зажжённая сигарета зажата между его зубов.
     .suffix = { "" }
 
-ent-PaintingSkeletonBoof = Череп MLG скелета с толстым косяком
+ent-Painting10SkeletonBoof = Череп MLG скелета с толстым косяком
     .desc = Живопись даётся с трудом. Не стесняйтесь делать скриншоты.
     .suffix = { "" }
 
-ent-PaintingPrayerHands = Руки молящегося
+ent-Painting11PrayerHands = Руки молящегося
     .desc = На этой картине изображена пара рук, сложенных в молитве.
     .suffix = { "" }
 
-ent-PaintingOldGuitarist = Старый гитарист
+ent-Painting12OldGuitarist = Старый гитарист
     .desc = На этой картине изображён старый, худой человек, сжимающий в руках гитару. Его лицо выглядит осунувшимся и болезненным.
     .suffix = { "" }
 
-ent-PaintingOlympia = Олимпия
+ent-Painting13Olympia = Олимпия
     .desc = На этой картине изображена нагая женщина, лежащая на кровати. Слуга ухаживает за ней.
     .suffix = { "" }
 
-ent-PaintingSaturn = Сатурн, пожирающий своего сына
+ent-Painting14Saturn = Сатурн, пожирающий своего сына
     .desc = На этой картине изображен титан, пожирающий человеческое тело. У него пугающий взгляд.
     .suffix = { "" }
 
-ent-PaintingSleepingGypsy = Спящая цыганка
+ent-Painting15SleepingGypsy = Спящая цыганка
     .desc = На этой картине изображена цыганка, спящая в пустыне среди своих вещей. Позади них стоит лев.
     .suffix = { "" }
 
-ent-PaintingRedBlueYellow = Композиция с красным, синим и жёлтым
+ent-Painting16RedBlueYellow = Композиция с красным, синим и жёлтым
     .desc = Эта картина состоит из множества прямоугольников. Они заполнены равномерными оттенками красок.
     .suffix = { "" }
 
-ent-PaintingAmogusTriptych = Триптих Амогус (Безымянный)
+ent-Painting17AmogusTriptych = Триптих Амогус (Безымянный)
     .desc = Эта картина состоит из 3 отдельных частей. На каждой из них изображена религиозная фигура.
     .suffix = { "" }
 
-ent-PaintingHelloWorld = Здравствуй мир
+ent-Painting18HelloWorld = Здравствуй мир
     .desc = Эта картина выполнена из множества разноцветных квадратов, расположенных в необычном порядке. Возможно, это что-то означает?
+    .suffix = { "" }
+
+ent-Painting19SadClown = Грустный Клоун
+    .desc = Клоун плачет. А ты улыбаешься.
+
+ent-Painting20PostmodernMime = Постмодерн: Мим
+    .desc = Постмодернистское изображение мима. Непостижимо и чудесно.
+
+ent-Painting21Monkey = картина обезьяны
+    .desc = Отвергни эволюцию, стань бибизянкой.
     .suffix = { "" }

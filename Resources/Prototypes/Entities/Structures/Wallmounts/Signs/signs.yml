@@ -1109,132 +1109,132 @@
       color: "#ffffff05"
       shader: unshaded # WWDP edit end
 
-- type: entity
-  parent: BaseSign
-  id: SignCorrosives
-  name: corrosives warning sign
-  description: A sign indicating a corrosive materials hazard.
-  components:
-  - type: Sprite
-    state: corrosives
+#- type: entity
+#  parent: BaseSign
+#  id: SignCorrosives
+#  name: corrosives warning sign
+#  description: A sign indicating a corrosive materials hazard.
+#  components:
+#  - type: Sprite
+#    state: corrosives
 
-- type: entity
-  parent: BaseSign
-  id: SignCryogenics
-  name: cryogenics warning sign
-  description: A sign indicating a cryogenic materials hazard. Bring a jacket!
-  components:
-  - type: Sprite
-    state: cryogenics
+#- type: entity
+#  parent: BaseSign
+#  id: SignCryogenics
+#  name: cryogenics warning sign
+#  description: A sign indicating a cryogenic materials hazard. Bring a jacket!
+#  components:
+#  - type: Sprite
+#    state: cryogenics
 
-- type: entity
-  parent: BaseSign
-  id: SignDanger
-  name: danger warning sign
-  description: A sign warning against some danger.
-  components:
-  - type: Sprite
-    state: danger
+#- type: entity
+#  parent: BaseSign
+#  id: SignDanger
+#  name: danger warning sign
+#  description: A sign warning against some danger.
+#  components:
+#  - type: Sprite
+#    state: danger
 
-- type: entity
-  parent: BaseSign
-  id: SignExplosives
-  name: explosives warning sign
-  description: A sign indicating an explosive materials hazard.
-  components:
-  - type: Sprite
-    state: explosives
+#- type: entity
+#  parent: BaseSign
+#  id: SignExplosives
+#  name: explosives warning sign
+#  description: A sign indicating an explosive materials hazard.
+#  components:
+#  - type: Sprite
+#    state: explosives
 
-- type: entity
-  parent: BaseSign
-  id: SignFlammable
-  name: flammable warning sign
-  description: A sign indicating a flammable materials hazard.
-  components:
-  - type: Sprite
-    state: flammable
+#- type: entity
+#  parent: BaseSign
+#  id: SignFlammable
+#  name: flammable warning sign
+#  description: A sign indicating a flammable materials hazard.
+#  components:
+#  - type: Sprite
+#    state: flammable
 
-- type: entity
-  parent: BaseSign
-  id: SignLaser
-  name: laser warning sign
-  description: A sign indicating a laser hazard.
-  components:
-  - type: Sprite
-    state: laser
+#- type: entity
+#  parent: BaseSign
+#  id: SignLaser
+#  name: laser warning sign
+#  description: A sign indicating a laser hazard.
+#  components:
+#  - type: Sprite
+#    state: laser
 
-- type: entity
-  parent: BaseSign
-  id: SignMagnetics
-  name: magnetics warning sign
-  description: A sign indicating a magnetic materials hazard.
-  components:
-  - type: Sprite
-    state: magnetics
+#- type: entity
+#  parent: BaseSign
+#  id: SignMagnetics
+#  name: magnetics warning sign
+#  description: A sign indicating a magnetic materials hazard.
+#  components:
+#  - type: Sprite
+#    state: magnetics
 
-- type: entity
-  parent: BaseSign
-  id: SignMemetic
-  name: memetic warning sign
-  description: A sign indicating a memetic hazard.
-  components:
-  - type: Sprite
-    state: memetic
+#- type: entity
+#  parent: BaseSign
+#  id: SignMemetic
+#  name: memetic warning sign
+#  description: A sign indicating a memetic hazard.
+#  components:
+#  - type: Sprite
+#    state: memetic
 
-- type: entity
-  parent: BaseSign
-  id: SignSecure
-  name: secure sign
-  description: A sign indicating that the area ahead is a secure area.
-  components:
-  - type: Sprite
-    state: secure
+#- type: entity
+#  parent: BaseSign
+#  id: SignSecure
+#  name: secure sign
+#  description: A sign indicating that the area ahead is a secure area.
+#  components:
+#  - type: Sprite
+#    state: secure
 
-- type: entity
-  parent: BaseSign
-  id: SignSecurearea
-  name: secure area sign
-  description: A sign indicating that the area ahead is a secure area.
-  components:
-  - type: Sprite
-    state: securearea
-    snapCardinals: true
+#- type: entity
+#  parent: BaseSign
+#  id: SignSecurearea
+#  name: secure area sign
+#  description: A sign indicating that the area ahead is a secure area.
+#  components:
+#  - type: Sprite
+#    state: securearea
+#    snapCardinals: true
 
-- type: entity
-  parent: BaseSign
-  id: SignShock
-  name: shock sign
-  description: A sign indicating an electrical hazard.
-  components:
-  - type: Sprite
-    state: shock
+#- type: entity
+#  parent: BaseSign
+#  id: SignShock
+#  name: shock sign
+#  description: A sign indicating an electrical hazard.
+#  components:
+#  - type: Sprite
+#    state: shock
 
-- type: entity
-  parent: BaseSign
-  id: SignOptical
-  name: optical warning sign
-  description: A sign indicating an optical radiation hazard.
-  components:
-  - type: Sprite
-    state: optical
+#- type: entity
+#  parent: BaseSign
+#  id: SignOptical
+#  name: optical warning sign
+#  description: A sign indicating an optical radiation hazard.
+#  components:
+#  - type: Sprite
+#    state: optical
 
-- type: entity
-  parent: BaseSign
-  id: SignOxidants
-  name: oxidants warning sign
-  description: A sign indicating an oxidizing agent hazard.
-  components:
-  - type: Sprite
-    state: oxidants
+#- type: entity
+#  parent: BaseSign
+#  id: SignOxidants
+#  name: oxidants warning sign
+#  description: A sign indicating an oxidizing agent hazard.
+#  components:
+#  - type: Sprite
+#    state: oxidants
 
-- type: entity
-  parent: BaseSign
-  id: SignRadiation
-  name: radiation warning sign
-  description: A sign indicating an ionizing radiation hazard.
-  components:
-  - type: Sprite
-    state: radiation
+#- type: entity
+#  parent: BaseSign
+#  id: SignRadiation
+#  name: radiation warning sign
+#  description: A sign indicating an ionizing radiation hazard.
+#  components:
+#  - type: Sprite
+#    state: radiation
 
 - type: entity
   parent: BaseSign
@@ -1259,131 +1259,131 @@
       color: "#ffffff05"
       shader: unshaded # WWDP edit end
 
-- type: entity
-  parent: BaseSign
-  id: SignSecureMedRed
-  name: red secure sign
-  description: A sign indicating that the area ahead is a secure area.
-  components:
-  - type: Sprite
-    state: medium_secure_red
+#- type: entity
+#  parent: BaseSign
+#  id: SignSecureMedRed
+#  name: red secure sign
+#  description: A sign indicating that the area ahead is a secure area.
+#  components:
+#  - type: Sprite
+#    state: medium_secure_red
 
-- type: entity
-  parent: BaseSign
-  id: SignSecureSmall
-  name: small secure sign
-  description: A sign indicating that the area ahead is a secure area.
-  components:
-  - type: Sprite
-    state: small_secure
+#- type: entity
+#  parent: BaseSign
+#  id: SignSecureSmall
+#  name: small secure sign
+#  description: A sign indicating that the area ahead is a secure area.
+#  components:
+#  - type: Sprite
+#    state: small_secure
 
-- type: entity
-  parent: BaseSign
-  id: SignSecureSmallRed
-  name: small red secure sign
-  description: A sign indicating that the area ahead is a secure area.
-  components:
-  - type: Sprite
-    state: small_secure_red
+#- type: entity
+#  parent: BaseSign
+#  id: SignSecureSmallRed
+#  name: small red secure sign
+#  description: A sign indicating that the area ahead is a secure area.
+#  components:
+#  - type: Sprite
+#    state: small_secure_red
 
-- type: entity
-  parent: BaseSign
-  id: SignBlankMed
-  name: blank sign
-  description: A blank sign.
-  components:
-  - type: Sprite
-    state: medium_blank
+#- type: entity
+#  parent: BaseSign
+#  id: SignBlankMed
+#  name: blank sign
+#  description: A blank sign.
+#  components:
+#  - type: Sprite
+#    state: medium_blank
 
-- type: entity
-  parent: BaseSign
-  id: SignMagneticsMed
-  name: magnetics sign
-  description: A sign indicating the use of magnets.
-  components:
-  - type: Sprite
-    state: medium_magnetics
+#- type: entity
+#  parent: BaseSign
+#  id: SignMagneticsMed
+#  name: magnetics sign
+#  description: A sign indicating the use of magnets.
+#  components:
+#  - type: Sprite
+#    state: medium_magnetics
 
-- type: entity
-  parent: BaseSign
-  id: SignDangerMed
-  name: danger sign
-  description: A sign warning against some form of danger.
-  components:
-  - type: Sprite
-    state: medium_danger
+#- type: entity
+#  parent: BaseSign
+#  id: SignDangerMed
+#  name: danger sign
+#  description: A sign warning against some form of danger.
+#  components:
+#  - type: Sprite
+#    state: medium_danger
 
-- type: entity
-  parent: BaseSign
-  id: ExplosivesSignMed
-  name: explosives sign
-  description: A sign indicating explosive materials.
-  components:
-  - type: Sprite
-    state: medium_explosives
+#- type: entity
+#  parent: BaseSign
+#  id: ExplosivesSignMed
+#  name: explosives sign
+#  description: A sign indicating explosive materials.
+#  components:
+#  - type: Sprite
+#    state: medium_explosives
 
-- type: entity
-  parent: BaseSign
-  id: SignCryogenicsMed
-  name: cryogenics sign
-  description: A sign indicating cryogenic materials.
-  components:
-  - type: Sprite
-    state: medium_cryogenics
+#- type: entity
+#  parent: BaseSign
+#  id: SignCryogenicsMed
+#  name: cryogenics sign
+#  description: A sign indicating cryogenic materials.
+#  components:
+#  - type: Sprite
+#    state: medium_cryogenics
 
-- type: entity
-  parent: BaseSign
-  id: SignElectricalMed
-  name: electrical sign
-  description: A sign indicating an electrical hazard.
-  components:
-  - type: Sprite
-    state: medium_electrical
+#- type: entity
+#  parent: BaseSign
+#  id: SignElectricalMed
+#  name: electrical sign
+#  description: A sign indicating an electrical hazard.
+#  components:
+#  - type: Sprite
+#    state: medium_electrical
 
-- type: entity
-  parent: BaseSign
-  id: SignBiohazardMed
-  name: biohazard sign
-  description: A sign indicating a biohazard.
-  components:
-  - type: Sprite
-    state: medium_biohazard
+#- type: entity
+#  parent: BaseSign
+#  id: SignBiohazardMed
+#  name: biohazard sign
+#  description: A sign indicating a biohazard.
+#  components:
+#  - type: Sprite
+#    state: medium_biohazard
 
-- type: entity
-  parent: BaseSign
-  id: SignRadiationMed
-  name: radiation sign
-  description: A sign indicating an ionizing radiation hazard.
-  components:
-  - type: Sprite
-    state: medium_radiation
+#- type: entity
+#  parent: BaseSign
+#  id: SignRadiationMed
+#  name: radiation sign
+#  description: A sign indicating an ionizing radiation hazard.
+#  components:
+#  - type: Sprite
+#    state: medium_radiation
 
-- type: entity
-  parent: BaseSign
-  id: SignFlammableMed
-  name: flammable sign #when flammable component is done, this sign needs it
-  description: A sign indicating flammable materials.
-  components:
-  - type: Sprite
-    state: medium_flammable
+#- type: entity
+#  parent: BaseSign
+#  id: SignFlammableMed
+#  name: flammable sign #when flammable component is done, this sign needs it
+#  description: A sign indicating flammable materials.
+#  components:
+#  - type: Sprite
+#    state: medium_flammable
 
-- type: entity
-  parent: BaseSign
-  id: SignLaserMed
-  name: laser sign
-  description: A sign indicating a laser hazard.
-  components:
-  - type: Sprite
-    state: medium_laser
+#- type: entity
+#  parent: BaseSign
+#  id: SignLaserMed
+#  name: laser sign
+#  description: A sign indicating a laser hazard.
+#  components:
+#  - type: Sprite
+#    state: medium_laser
 
-- type: entity
-  parent: BaseSign
-  id: SignSecureMed
-  name: secure sign
-  description: A sign indicating that the area ahead is a secure area.
-  components:
-  - type: Sprite
-    state: medium_secure
+#- type: entity
+#  parent: BaseSign
+#  id: SignSecureMed
+#  name: secure sign
+#  description: A sign indicating that the area ahead is a secure area.
+#  components:
+#  - type: Sprite
+#    state: medium_secure
 
 # TODO: make a fancier version of this sign
 - type: entity
@@ -1397,77 +1397,77 @@
 
 # Atmos Warnings
 
-- type: entity
-  parent: BaseSign
-  id: WarningAir
-  name: air warning sign
-  description: WARNING! Air flow tube. Ensure the flow is disengaged before working.
-  components:
-  - type: Sprite
-    state: atmos_air
+#- type: entity
+#  parent: BaseSign
+#  id: WarningAir
+#  name: air warning sign
+#  description: WARNING! Air flow tube. Ensure the flow is disengaged before working.
+#  components:
+#  - type: Sprite
+#    state: atmos_air
 
-- type: entity
-  parent: BaseSign
-  id: WarningCO2
-  name: CO2 warning sign
-  description: WARNING! CO2 flow tube. Ensure the flow is disengaged before working.
-  components:
-  - type: Sprite
-    state: atmos_co2
+#- type: entity
+#  parent: BaseSign
+#  id: WarningCO2
+#  name: CO2 warning sign
+#  description: WARNING! CO2 flow tube. Ensure the flow is disengaged before working.
+#  components:
+#  - type: Sprite
+#    state: atmos_co2
 
-- type: entity
-  parent: BaseSign
-  id: WarningN2
-  name: N2 warning sign
-  description: WARNING! N2 flow tube. Ensure the flow is disengaged before working.
-  components:
-  - type: Sprite
-    state: atmos_n2
+#- type: entity
+#  parent: BaseSign
+#  id: WarningN2
+#  name: N2 warning sign
+#  description: WARNING! N2 flow tube. Ensure the flow is disengaged before working.
+#  components:
+#  - type: Sprite
+#    state: atmos_n2
 
-- type: entity
-  parent: BaseSign
-  id: WarningN2O
-  name: N2O warning sign
-  description: WARNING! N2O flow tube. Ensure the flow is disengaged before working.
-  components:
-  - type: Sprite
-    state: atmos_n2o
+#- type: entity
+#  parent: BaseSign
+#  id: WarningN2O
+#  name: N2O warning sign
+#  description: WARNING! N2O flow tube. Ensure the flow is disengaged before working.
+#  components:
+#  - type: Sprite
+#    state: atmos_n2o
 
-- type: entity
-  parent: BaseSign
-  id: WarningO2
-  name: O2 warning sign
-  description: WARNING! O2 flow tube. Ensure the flow is disengaged before working.
-  components:
-  - type: Sprite
-    state: atmos_o2
+#- type: entity
+#  parent: BaseSign
+#  id: WarningO2
+#  name: O2 warning sign
+#  description: WARNING! O2 flow tube. Ensure the flow is disengaged before working.
+#  components:
+#  - type: Sprite
+#    state: atmos_o2
 
-- type: entity
-  parent: BaseSign
-  id: WarningPlasma
-  name: plasma waste sign
-  description: WARNING! Plasma flow tube. Ensure the flow is disengaged before working.
-  components:
-  - type: Sprite
-    state: atmos_plasma
+#- type: entity
+#  parent: BaseSign
+#  id: WarningPlasma
+#  name: plasma waste sign
+#  description: WARNING! Plasma flow tube. Ensure the flow is disengaged before working.
+#  components:
+#  - type: Sprite
+#    state: atmos_plasma
 
-- type: entity
-  parent: BaseSign
-  id: WarningTritium
-  name: tritium waste sign
-  description: WARNING! Tritium flow tube. Ensure the flow is disengaged before working.
-  components:
-  - type: Sprite
-    state: atmos_tritium
+#- type: entity
+#  parent: BaseSign
+#  id: WarningTritium
+#  name: tritium waste sign
+#  description: WARNING! Tritium flow tube. Ensure the flow is disengaged before working.
+#  components:
+#  - type: Sprite
+#    state: atmos_tritium
 
-- type: entity
-  parent: BaseSign
-  id: WarningWaste
-  name: atmos waste sign
-  description: WARNING! Waste flow tube. Ensure the flow is disengaged before working.
-  components:
-  - type: Sprite
-    state: atmos_waste
+#- type: entity
+#  parent: BaseSign
+#  id: WarningWaste
+#  name: atmos waste sign
+#  description: WARNING! Waste flow tube. Ensure the flow is disengaged before working.
+#  components:
+#  - type: Sprite
+#    state: atmos_waste
 
 - type: entity
   parent: BaseSign

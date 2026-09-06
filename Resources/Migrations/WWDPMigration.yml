@@ -255,6 +255,39 @@ WarningPlasma: SignWarningAtmosPlasma
 WarningTritium: SignWarningAtmosTritium
 WarningWaste: SignWarningAtmosWaste
 
+SignBiohazard: SignWarningBiohazard
+SignBiohazardMed: SignWarningBiohazard
+SignCorrosives: SignWarningAcid
+SignCryogenics: SignWarningCryo
+SignCryogenicsMed: SignWarningCryo
+SignDanger: null
+SignDangerMed: null
+SignExplosives: SignWarningExplosive
+ExplosivesSignMed: SignWarningExplosive
+SignFlammable: SignWarningFlammable
+SignFlammableMed: SignWarningFlammable
+SignFire: SignWarningFlammable
+SignLaser: SignWarningLaser
+SignLaserMed: SignWarningLaser
+SignMagnetics: SignWarningMagnetic
+SignMagneticsMed: SignWarningMagnetic
+SignMemetic: null
+SignSecure: SignWarningSecure
+SignSecureMed: SignWarningSecure
+SignSecureMedRed: SignWarningSecureRed
+SignSecurearea: SignWarningSecure
+SignSecureSmall: SignWarningSecure
+SignSecureSmallRed: SignWarningSecureRed
+SignShock: SignWarningElectricity
+SignElectricalMed: SignWarningElectricity
+SignOptical: null
+SignOxidants: null
+SignRadiation: SignWarningRadiation
+SignRadiationMed: SignWarningRadiation
+SignBlankMed: SignWarningBase
+
+SignBio: null
+
 # Contraband Posters 21.08.2026
 PosterContrabandFreeTonto: PosterContraband1FreeTonto
 PosterContrabandAtmosiaDeclarationIndependence: PosterContraband2AtmosiaDeclarationIndependence
@@ -440,3 +473,21 @@ PaintingMonkey: Painting21Monkey
 PaintingBlunt: RandomPainting # Temp
 PaintingSpoon: RandomPainting # Temp
 PaintingMothBigCatch: RandomPainting # Temp
+
+# Buttonframes 29.08.2026
+ButtonFrameGrey4: null
+ButtonFrameCaution4: null
+ButtonFrameCautionSecurity4: null
+ButtonFrameExit4: null
+ButtonFrameJanitor4: null
+ButtonFrameGrey5: null
+ButtonFrameCaution5: null
+ButtonFrameCautionSecurity5: null
+ButtonFrameExit5: null
+ButtonFrameJanitor5: null
+ButtonFrameGrey6: null
+ButtonFrameCaution6: null
+ButtonFrameCautionSecurity6: null
+ButtonFrameExit6: null
+ButtonFrameJanitor6: null
+

@@ -9783,11 +9783,6 @@ ent-LGBTQFlag = флаг ЛГБТК+
 ent-PirateFlag = пиратский флаг
     .desc = Поднять весёлого Роджера, сорванцы!
 
-
-ent-PaintingSadClown = Грустный Клоун
-    .desc = Клоун плачет. А ты улыбаешься.
-
-
 ent-PosterContrabandMoth = Моль Синдиката — Ядерная операция
     .desc = Постер от Синдиката с милой молью, советующей не прятать ядерный диск. Не слушайте.
 
@@ -9816,13 +9811,8 @@ ent-PosterContrabandMissingSpacepen = Пропажа: Косморука
     .desc = Что-то, чего ты никогда не найдёшь.
 
 
-ent-PosterLegitAnatomyPoster = Анатомия космонавта
+ent-PosterLegit40AnatomyPoster = Анатомия космонавта
     .desc = Всё, из чего ты состоишь. Визуализировано.
-
-
-ent-PosterLegitMime = Постмодерн: Мим
-    .desc = Постмодернистское изображение мима. Непостижимо и чудесно.
-
 
 ent-PosterLegitCarpMount = карп на стене
     .desc = Carpe diem, товарищ.
