@@ -55,7 +55,7 @@
   - type: Physics
     canCollide: false
   - type: Sprite
-    drawdepth: SmallObjects
+    drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/switch.rsi
     state: dead
   - type: UseDelay
@@ -98,6 +98,8 @@
               collection: MetalBreak
               params:
                 volume: -8
+  - type: AltExamine # WWDP edit
+    useAltCalc: true # WWDP edit
 
 - type: entity
   id: ApcNetSwitch
@@ -485,7 +487,7 @@
 - type: entity
   id: ButtonFrame
   name: button frame
-  categories: [ HideSpawnMenu ]
+  abstract: true
   description: It's a frame to help distinguish switches visually.
   placement:
     mode: SnapgridCenter
@@ -499,8 +501,10 @@
     canCollide: false
   - type: Sprite
     drawdepth: SmallObjects
-    sprite: _White/Structures/Wallmounts/switch_frame/f1.rsi # WD EDIT
+    sprite: _White/Structures/Wallmounts/SwitchFrames/f1.rsi # WD EDIT
     state: grey
   - type: Rotatable
   - type: Fixtures
+  - type: AltExamine # WWDP edit
+    useAltCalc: true # WWDP edit
 
