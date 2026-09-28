@@ -5,6 +5,7 @@
   components:
   - type: WallMount
   - type: Sprite
+    drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/mirror.rsi
     state: mirror
   - type: InteractionOutline
@@ -23,3 +24,6 @@
     interfaces:
       enum.MagicMirrorUiKey.Key:
         type: MagicMirrorBoundUserInterface
+  - type: AltExamine # WWDP edit
+    useAltCalc: true # WWDP edit
+

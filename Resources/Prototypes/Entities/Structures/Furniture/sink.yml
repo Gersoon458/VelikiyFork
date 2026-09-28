@@ -9,6 +9,7 @@
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite
+    drawdepth: SmallObjects
     sprite: Structures/Furniture/sink.rsi
     layers:
       - state: sink_stem

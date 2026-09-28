@@ -1,1 +1,19 @@
-{"version":1,"size":{"x":32,"y":32},"copyright":"Gersoon (gersoon458) for WWhiteDreamProject, 20.08.25","license":"CC-BY-NC-SA-4.0","states":[{"name":"mirror"},{"name":"mirror_broke"}]}
+{
+    "version":1,
+    "size":{
+        "x":64,
+        "y":64
+    },
+    "license":"CC-BY-NC-SA-4.0",
+    "copyright":"Gersoon(gersoon458) for WWhiteDreamProject, 24.09.2026",
+    "states":[
+        {
+            "name": "mirror",
+            "directions": 4
+        },
+        {
+            "name": "mirror_broke",
+            "directions": 4
+        }
+    ]
+}
