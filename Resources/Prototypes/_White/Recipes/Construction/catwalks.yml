@@ -1,0 +1,219 @@
+﻿# Old
+- type: construction
+  name: catwalk
+  id: CatwalkOldSteel
+  graph: CatwalkOldSteel
+  startNode: start
+  targetNode: CatwalkOldSteel
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/old.rsi
+    state: steel_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  name: catwalk
+  id: CatwalkOldWhite
+  graph: CatwalkOldWhite
+  startNode: start
+  targetNode: CatwalkOldWhite
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/old.rsi
+    state: white_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  name: catwalk
+  id: CatwalkOldDark
+  graph: CatwalkOldDark
+  startNode: start
+  targetNode: CatwalkOldDark
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/old.rsi
+    state: dark_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+# New
+- type: construction
+  name: catwalk
+  id: CatwalkNewSteel
+  graph: CatwalkNewSteel
+  startNode: start
+  targetNode: CatwalkNewSteel
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/new.rsi
+    state: steel_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  name: catwalk
+  id: CatwalkNewWhite
+  graph: CatwalkNewWhite
+  startNode: start
+  targetNode: CatwalkNewWhite
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/new.rsi
+    state: white_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  name: catwalk
+  id: CatwalkNewDark
+  graph: CatwalkNewDark
+  startNode: start
+  targetNode: CatwalkNewDark
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/new.rsi
+    state: dark_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+# No warn
+- type: construction
+  name: catwalk
+  id: CatwalkNowarnSteel
+  graph: CatwalkNowarnSteel
+  startNode: start
+  targetNode: CatwalkNowarnSteel
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/nowarn.rsi
+    state: steel_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  name: catwalk
+  id: CatwalkNowarnWhite
+  graph: CatwalkNowarnWhite
+  startNode: start
+  targetNode: CatwalkNowarnWhite
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/nowarn.rsi
+    state: white_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  name: catwalk
+  id: CatwalkNowarnDark
+  graph: CatwalkNowarnDark
+  startNode: start
+  targetNode: CatwalkNowarnDark
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/nowarn.rsi
+    state: dark_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+# Brick
+- type: construction
+  name: catwalk
+  id: CatwalkBrickSteel
+  graph: CatwalkBrickSteel
+  startNode: start
+  targetNode: CatwalkBrickSteel
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/brick.rsi
+    state: steel_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  name: catwalk
+  id: CatwalkBrickWhite
+  graph: CatwalkBrickWhite
+  startNode: start
+  targetNode: CatwalkBrickWhite
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/brick.rsi
+    state: white_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  name: catwalk
+  id: CatwalkBrickDark
+  graph: CatwalkBrickDark
+  startNode: start
+  targetNode: CatwalkBrickDark
+  category: construction-category-structures
+  description: Just like a lattice. Except it looks better.
+  conditions:
+  - !type:TileNotBlocked
+    failIfSpace: false
+  icon:
+    sprite: _White/Structures/Catwalks/brick.rsi
+    state: dark_full
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false

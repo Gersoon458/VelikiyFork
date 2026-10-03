@@ -1,0 +1,303 @@
+﻿# Old
+- type: constructionGraph
+  id: CatwalkOldSteel
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkOldSteel
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkOldSteel
+    entity: CatwalkOldSteel
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+- type: constructionGraph
+  id: CatwalkOldWhite
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkOldWhite
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkOldWhite
+    entity: CatwalkOldWhite
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+- type: constructionGraph
+  id: CatwalkOldDark
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkOldDark
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkOldDark
+    entity: CatwalkOldDark
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+# New
+- type: constructionGraph
+  id: CatwalkNewSteel
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkNewSteel
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkNewSteel
+    entity: CatwalkNewSteel
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+- type: constructionGraph
+  id: CatwalkNewWhite
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkNewWhite
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkNewWhite
+    entity: CatwalkNewWhite
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+- type: constructionGraph
+  id: CatwalkNewDark
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkNewDark
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkNewDark
+    entity: CatwalkNewDark
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+# No warn
+- type: constructionGraph
+  id: CatwalkNowarnSteel
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkNowarnSteel
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkNowarnSteel
+    entity: CatwalkNowarnSteel
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+- type: constructionGraph
+  id: CatwalkNowarnWhite
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkNowarnWhite
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkNowarnWhite
+    entity: CatwalkNowarnWhite
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+- type: constructionGraph
+  id: CatwalkNowarnDark
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkNowarnDark
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkNowarnDark
+    entity: CatwalkNowarnDark
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+# Brick
+- type: constructionGraph
+  id: CatwalkBrickSteel
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkBrickSteel
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkBrickSteel
+    entity: CatwalkBrickSteel
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+- type: constructionGraph
+  id: CatwalkBrickWhite
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkBrickWhite
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkBrickWhite
+    entity: CatwalkBrickWhite
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting
+
+- type: constructionGraph
+  id: CatwalkBrickDark
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: CatwalkBrickDark
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: MetalRod
+        amount: 2
+  - node: CatwalkBrickDark
+    entity: CatwalkBrickDark
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 2
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Cutting

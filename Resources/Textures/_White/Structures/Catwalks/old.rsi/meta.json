@@ -1,0 +1,116 @@
+{
+	"version": 1,
+	"license": "CC-BY-NC-SA-4.0",
+	"copyright": "Purka(purplepigeon580), edited by Gersoon(gersoon458) for WWhiteDreamProject, 02.010.2026",
+	"size": {
+		"x": 32,
+		"y": 32
+	},
+	"states": [
+		{
+			"name": "steel_0",
+			"directions": 4
+		},
+		{
+			"name": "steel_1",
+			"directions": 4
+		},
+		{
+			"name": "steel_2",
+			"directions": 4
+		},
+		{
+			"name": "steel_3",
+			"directions": 4
+		},
+		{
+			"name": "steel_4",
+			"directions": 4
+		},
+		{
+			"name": "steel_5",
+			"directions": 4
+		},
+		{
+			"name": "steel_6",
+			"directions": 4
+		},
+		{
+			"name": "steel_7",
+			"directions": 4
+		},
+		{
+			"name": "steel_full"
+		},
+        {
+            "name": "white_0",
+            "directions": 4
+        },
+        {
+            "name": "white_1",
+            "directions": 4
+        },
+        {
+            "name": "white_2",
+            "directions": 4
+        },
+        {
+            "name": "white_3",
+            "directions": 4
+        },
+        {
+            "name": "white_4",
+            "directions": 4
+        },
+        {
+            "name": "white_5",
+            "directions": 4
+        },
+        {
+            "name": "white_6",
+            "directions": 4
+        },
+        {
+            "name": "white_7",
+            "directions": 4
+        },
+        {
+            "name": "white_full"
+        },
+        {
+            "name": "dark_0",
+            "directions": 4
+        },
+        {
+            "name": "dark_1",
+            "directions": 4
+        },
+        {
+            "name": "dark_2",
+            "directions": 4
+        },
+        {
+            "name": "dark_3",
+            "directions": 4
+        },
+        {
+            "name": "dark_4",
+            "directions": 4
+        },
+        {
+            "name": "dark_5",
+            "directions": 4
+        },
+        {
+            "name": "dark_6",
+            "directions": 4
+        },
+        {
+            "name": "dark_7",
+            "directions": 4
+        },
+        {
+            "name": "dark_full"
+        }
+	]
+}

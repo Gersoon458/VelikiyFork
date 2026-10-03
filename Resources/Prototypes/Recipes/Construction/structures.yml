@@ -892,28 +892,28 @@
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
-- type: construction
-  name: catwalk
-  id: Catwalk
-  graph: Catwalk
-  startNode: start
-  targetNode: Catwalk
-  category: construction-category-structures
-  description: Just like a lattice. Except it looks better.
-  conditions:
-    - !type:TileNotBlocked
-      failIfSpace: false
-  # Lavaland Change: add ability to build catwalks on any tiles
-  #    - !type:TileType
-  #      targets:
-  #        - Lattice
-  #        - Plating
-  icon:
-    sprite: Structures/catwalk.rsi
-    state: catwalk_preview
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
+#- type: construction # WWDP edit, new catwalks
+#  name: catwalk
+#  id: Catwalk
+#  graph: Catwalk
+#  startNode: start
+#  targetNode: Catwalk
+#  category: construction-category-structures
+#  description: Just like a lattice. Except it looks better.
+#  conditions:
+#    - !type:TileNotBlocked
+#      failIfSpace: false
+#  # Lavaland Change: add ability to build catwalks on any tiles
+#  #    - !type:TileType
+#  #      targets:
+#  #        - Lattice
+#  #        - Plating
+#  icon:
+#    sprite: Structures/catwalk.rsi
+#    state: catwalk_preview
+#  objectType: Structure
+#  placementMode: SnapgridCenter
+#  canBuildInImpassable: false
 
 - type: construction
   name: bananium floor

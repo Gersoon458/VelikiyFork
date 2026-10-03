@@ -1,0 +1,195 @@
+# Old
+- type: entity
+  parent: Catwalk
+  id: CatwalkOldSteel
+  components:
+  - type: Sprite
+    sprite: _White/Structures/Catwalks/old.rsi
+  - type: Icon
+    sprite: _White/Structures/Catwalks/old.rsi
+    state: steel_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk
+    base: steel_
+  - type: Construction
+    graph: CatwalkOldSteel
+    node: CatwalkOldSteel
+
+- type: entity
+  parent: CatwalkOldSteel
+  id: CatwalkOldWhite
+  components:
+  - type: Icon
+    state: white_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk
+    base: white_
+  - type: Construction
+    graph: CatwalkOldWhite
+    node: CatwalkOldWhite
+
+- type: entity
+  parent: CatwalkOldSteel
+  id: CatwalkOldDark
+  components:
+  - type: Icon
+    state: dark_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk
+    base: dark_
+  - type: Construction
+    graph: CatwalkOldDark
+    node: CatwalkOldDark
+
+# New
+- type: entity
+  parent: Catwalk
+  id: CatwalkNewSteel
+  components:
+  - type: Sprite
+    sprite: _White/Structures/Catwalks/new.rsi
+  - type: Icon
+    sprite: _White/Structures/Catwalks/new.rsi
+    state: steel_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk
+    base: steel_
+  - type: Construction
+    graph: CatwalkNewSteel
+    node: CatwalkNewSteel
+
+- type: entity
+  parent: CatwalkNewSteel
+  id: CatwalkNewWhite
+  components:
+  - type: Icon
+    state: white_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk
+    base: white_
+  - type: Construction
+    graph: CatwalkNewWhite
+    node: CatwalkNewWhite
+
+- type: entity
+  parent: CatwalkNewSteel
+  id: CatwalkNewDark
+  components:
+  - type: Icon
+    state: dark_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk
+    base: dark_
+  - type: Construction
+    graph: CatwalkNewDark
+    node: CatwalkNewDark
+
+# No warn
+- type: entity
+  parent: Catwalk
+  id: CatwalkNowarnSteel
+  components:
+  - type: Sprite
+    sprite: _White/Structures/Catwalks/nowarn.rsi
+  - type: Icon
+    sprite: _White/Structures/Catwalks/nowarn.rsi
+    state: steel_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk
+    base: steel_
+  - type: Construction
+    graph: CatwalkNowarnSteel
+    node: CatwalkNowarnSteel
+
+- type: entity
+  parent: CatwalkNowarnSteel
+  id: CatwalkNowarnWhite
+  components:
+  - type: Icon
+    state: white_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk
+    base: white_
+  - type: Construction
+    graph: CatwalkNowarnWhite
+    node: CatwalkNowarnWhite
+
+- type: entity
+  parent: CatwalkNowarnSteel
+  id: CatwalkNowarnDark
+  components:
+  - type: Icon
+    state: dark_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk
+    base: dark_
+  - type: Construction
+    graph: CatwalkNowarnDark
+    node: CatwalkNowarnDark
+
+# Brick
+- type: entity
+  parent: Catwalk
+  id: CatwalkBrickSteel
+  components:
+  - type: Sprite
+    sprite: _White/Structures/Catwalks/brick.rsi
+  - type: Icon
+    sprite: _White/Structures/Catwalks/brick.rsi
+    state: steel_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk_thick
+    base: steel_
+  - type: Construction
+    graph: CatwalkBrickSteel
+    node: CatwalkBrickSteel
+
+- type: entity
+  parent: CatwalkBrickSteel
+  id: CatwalkBrickWhite
+  components:
+  - type: Icon
+    state: white_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk_thick
+    base: white_
+  - type: Construction
+    graph: CatwalkBrickWhite
+    node: CatwalkBrickWhite
+
+- type: entity
+  parent: CatwalkBrickSteel
+  id: CatwalkBrickDark
+  components:
+  - type: Icon
+    state: dark_full
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: catwalk_thick
+    base: dark_
+  - type: Construction
+    graph: CatwalkBrickDark
+    node: CatwalkBrickDark
