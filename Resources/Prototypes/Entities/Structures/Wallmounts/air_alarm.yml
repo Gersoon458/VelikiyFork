@@ -116,6 +116,8 @@
     guides:
     - AirAlarms
     - DeviceMonitoringAndControl
+  - type: AltExamine # WWDP edit
+    useAltCalc: true # WWDP edits
 
 - type: entity
   id: AirAlarmAssembly

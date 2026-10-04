@@ -7,8 +7,6 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: WallMount
-    arc: 175
   - type: Transform
     anchored: true
   - type: Clickable

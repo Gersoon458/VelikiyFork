@@ -6,6 +6,7 @@
   components:
   - type: StationAiWhitelist
   - type: WallMount
+    arc: 175 # WWDP edit
   - type: ApcPowerReceiver
   - type: Electrified
     enabled: false
@@ -120,6 +121,8 @@
         enum.RadioDeviceVisualLayers.Speaker:
           True: { visible: true }
           False: { visible: false }
+  - type: AltExamine # WWDP edit
+    useAltCalc: true # WWDP edit
   placement:
     mode: SnapgridCenter
     snap:

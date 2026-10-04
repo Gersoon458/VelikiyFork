@@ -15,7 +15,7 @@
   - type: Physics
     canCollide: false
   - type: Sprite
-    drawdepth: SmallObjects
+    drawdepth: WallMountedItems # WWDP edit
     sprite: Structures/Wallmounts/switch.rsi
     state: on
   - type: SignalSwitch
@@ -37,6 +37,8 @@
     - Status
     lastSignals:
       Status: false
+  - type: AltExamine # WWDP edit
+    useAltCalc: true # WWDP edit
 
 - type: entity
   id: SignalButton
@@ -55,7 +57,7 @@
   - type: Physics
     canCollide: false
   - type: Sprite
-    drawdepth: WallMountedItems
+    drawdepth: WallMountedItems # WWDP edit
     sprite: Structures/Wallmounts/switch.rsi
     state: dead
   - type: UseDelay

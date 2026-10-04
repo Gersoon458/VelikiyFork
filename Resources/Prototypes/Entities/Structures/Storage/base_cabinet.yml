@@ -26,6 +26,10 @@
         enum.OpenableVisuals.Layer:
           True: { state: open }
           False: { state: closed }
+  - type: WallMount # WWDP edit start
+    arc: 175
+  - type: AltExamine
+    useAltCalc: true # WWDP edit end
 
 - type: entity
   abstract: true
