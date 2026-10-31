@@ -242,9 +242,11 @@
     sprite: Structures/Wallmounts/locked_switch.rsi
     layers:
     - state: base
+    - state: locked-unshaded
+      map: [ "enum.LockVisualLayers.Highlight" ]
+      shader: unshaded
     - state: locked
       map: ["enum.LockVisualLayers.Lock"]
-      shader: unshaded
 
 - type: entity
   id: LockableButtonCaptain
