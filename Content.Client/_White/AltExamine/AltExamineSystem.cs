@@ -87,6 +87,9 @@ namespace Content.Client._White.AltExamine
                         var query = EntityManager.AllEntityQueryEnumerator<AltExamineComponent, SpriteComponent, TransformComponent>();
                         while (query.MoveNext(out var uid, out var comp, out var sprite, out var xform))
                         {
+                            if (!comp.Enabled)
+                                continue;
+
                             ApplyEffects(uid, comp, sprite, xform);
                         }
                     }
@@ -105,6 +108,8 @@ namespace Content.Client._White.AltExamine
 
         private void ApplyEffects(EntityUid uid, AltExamineComponent comp, SpriteComponent sprite, TransformComponent xform)
         {
+            if (!comp.Enabled)
+                return;
             if (!_originalValues.ContainsKey(uid))
             {
                 _originalValues[uid] = (

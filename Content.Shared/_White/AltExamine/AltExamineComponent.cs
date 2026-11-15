@@ -9,6 +9,9 @@ namespace Content.Shared._White.AltExamine
     {
         // All comments are made through Google Translate.
 
+        [DataField("enabled"), NeverPushInheritance]
+        public bool Enabled = true;
+
         /// <summary>
         /// Shows a specific direction after turning off direction change (EnableOverride = true)
         /// </summary>

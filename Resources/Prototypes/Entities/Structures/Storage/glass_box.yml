@@ -22,6 +22,8 @@
         - LowImpassable
   - type: Anchorable
     delay: 4
+  - type: AltExamine
+    enabled: false
 
 - type: entity
   id: GlassBox
